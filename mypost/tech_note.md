@@ -41,6 +41,9 @@ Web设计初衷是一个静态信息资源发布媒介，通过超文本标记�
 - [Web开发技术发展历史](https://www.tianmaying.com/tutorial/web-history)
 - [Web开发技术的演变](http://blog.jobbole.com/45170/)
 
+经典页面
+
+- [Alloy Timer](http://alloyteam.github.io/AlloyTimer/)
 
 # 后台
 
@@ -48,6 +51,10 @@ Web设计初衷是一个静态信息资源发布媒介，通过超文本标记�
 ## 算法
 
 [编程之法：面试和算法心得](https://github.com/julycoding/The-Art-Of-Programming-By-July)
+
+
+
+InfraredCounterParser InfraredCounterHandler InfraredCounterSender 等字符串，取出最后一个单词，如Parser, Handler, Sender 等
 
 # 数据库
 # 网络
@@ -366,6 +373,10 @@ PATH  = %JAVA_HOME%/bin;%JAVA_HOME%/jre/bin
 - 选区移动：Alt + ↑/↓
 - 多选修改：Ctrl + D
 
+### Eclipse
+
+- 格式化代码：Ctrl + Shift + F
+
 参考链接：
 
 - [为什么我选择使用 VS Code进行前端开发?](https://zhuanlan.zhihu.com/p/28631442)
@@ -373,7 +384,7 @@ PATH  = %JAVA_HOME%/bin;%JAVA_HOME%/jre/bin
 
 # 物联网
 
-### 参考链接
+## 参考链接
 
 [关于RS232 和 RS485 的区别](http://blog.csdn.net/foreverhuylee/article/details/23375079)
 
@@ -448,7 +459,79 @@ NFC的短距离通信特性正是其优点，由于耗电量低、一次只和�
 
 ### PLC
 
+### 继电器
+
+继电器是具有隔离功能的自动开关元件，广泛应用于遥控、遥测、通讯、自动控制、机电一体化及电力电子设备中，是最重要的控制元件之一。
+
+继电器一般都有能反映一定输入变量（如电流、电压、功率、阻抗、频率、温度、压力、速度、光等）的感应机构（输入部分）；有能对被控电路实现“通”、“断”控制的执行机构（输出部分）；在继电器的输入部分和输出部分之间，还有对输入量进行耦合隔离，功能处理和对输出部分进行驱动的中间机构（驱动部分）。
+
+### 二进制协议
+
+二进制常用操作
+
+```
+
+	int value = 170;
+	void print(int x) => Console.WriteLine(Convert.ToString(x, 2).PadLeft(8, '0'));
+	int make_mask(int x) => 1 << x;
+	int set(int x, int i) => x | make_mask(i);
+	int unset(int x, int i) => x & ~make_mask(i);
+	bool isset(int x, int i) => (x & make_mask(i)) != 0;
+
+	//170的二进制显示：                    10101010
+	print(value);
+
+	// 右数第 5 位置 1 ：                  10111010
+	print(set(value, 4));
+
+	// 右数第 4 位置 0：                   10100010
+	print(unset(value, 3));
+
+	// 右数第 4 位是否为1:                 true
+	Console.WriteLine(isset(value, 3));
+
+	//右数第 3 位是否为1:                  false
+	Console.WriteLine(isset(value, 2));
+```
+
+### 其它
+
+TTL电平信号之所以被广泛使用，原因是：通常我们采用二进制来表示数据。而且规定，+5V等价于逻辑“1”，0V等价于逻辑“0”。这样的数据通信及电平规定方式，被称做TTL（晶体管-晶体管逻辑电平）信号系统。这是计算机处理器控制的设备内部各部分之间通信的标准技术。
+
+GND是电线接地端的简写。代表地线或0线。这个地并不是真正意义上的地，是出于应用而假设的一个地，对于电源来说，它就是一个电源的负极。
+
+VCC：电源电压(双极器件);电源电压(74系列数字电路);
+
+RXD 为接收数据的引脚，TXD 为发送数据的引脚。
+
+DTE提供或接收数据，连接到调制解调器上的计算机就是一种DTE。DTE提供或接收数据，连接到网络中的用户端机器，主要是计算机和终端设备。
+
+在网络端的连接设备称为DCE（Data-Communication Equipment）。DTE与进行信令处理的DCE相连。
+DTE通过DCE设备，例如，调制解调器，连接到数据网络。
+
+RS232标准中的RTS与CTS：即请求发送/清除发送，用于半双工时的收发切换，属于辅助流控信号。半双工的意思是说，发的时候不收，收的时候不发。那么怎么区分收发呢？缺省时是DCE向DTE发送数据，当DTE决定向DCE发数据时，先有效RTS，表示DTE希望向DCE发送。一般DCE不能马上转换收发状态，DTE就通过监测CTS是否有效来判断可否发送，这样避免了DTE在DCE未准备好时发送所导致的数据丢失。
+
+差分输入的是将两个输入端的差值作为信号，这样可以免去一些误差，比如你输入一个1V的信号电源有偏差，比实际输入要大0.1.就可以用差分输入1V和2V一减就把两端共有的那0.1误差剪掉了。单端输入无法去除这类误差。
+
+在某些系统里，系统'地'被用作电压基准点。当'地'当作电压测量基准时，这种信号规划被称之为单端的。
+
+差分信号的第一个好处是，因为你在控制'基准'电压，所以能够很容易地识别小信号。
+差分信号的第二个主要好处是，它对外部电磁干扰（EMI）是高度免疫的。
+差分信号提供的第三个好处是，在一个单电源系统，能够从容精确地处理'双极'信号。
+
+上拉就是将不确定的信号通过一个电阻钳位在高电平，电阻同时起限流作用。下拉同理，也是将不确定的信号通过一个电阻钳位在低电平。
+
+
 # 未整理
 
+[Avoid calling Invoke when the control is disposed](https://stackoverflow.com/questions/1874728/avoid-calling-invoke-when-the-control-is-disposed)
 
 
+
+http://blog.csdn.net/pkueecser/article/details/50610796 时间序列数据库的秘密
+
+
+
+https://github.com/justjavac/ReplaceGoogleCDN Replace Google CDN
+
+https://stackoverflow.com/questions/31572580/how-covert-c-sharp-datetime-to-java-datetimeusing-joda-time
