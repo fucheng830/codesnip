@@ -45,6 +45,40 @@ Web设计初衷是一个静态信息资源发布媒介，通过超文本标记�
 
 - [Alloy Timer](http://alloyteam.github.io/AlloyTimer/)
 
+## 切图
+
+- 取色：可以用 FSCapture 来取
+- 字号大小：PS里一般用 pt 单位，要转换成网页上的px
+- 字体设置：  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+- 测量间距
+	- "编辑"-"首选项"-"单位与标尺", 把单位设置为像素 px
+	- "视图"-"标尺"（Ctrl+R） 把标尺显示出来
+	- 按住 Shift 键盘，从标尺拖出参考线，会自动对齐物体的边缘
+	- 工具栏中选择标尺工具，按住 Shift 键（会自动垂直或水平），先点击第一条辅助线，再拖动到第二条辅助线，然后看信息栏里的 W 和 H，表示宽和高的信息
+	- 量完尺寸后可以"视图"-"清除参考线"
+- 矢量 Logo 导出：
+	- 通过图层的隐藏显示，找到 Logo 对应的矢量智能对象，
+	- 右键点击图层，转换为智能对象	
+	- 按住 Ctrl 单击智能对象图层，再 Ctrl + C 复制选中的内容
+	- Ctrl + N 新建文件，图像宽高会根据复制内容大小自动选定，背景内容选择 "透明" 
+	- Ctrl + V 粘贴内容，"文件"-"存储为 Web 所用格式"，格式选择 PNG-24, 存储即可，如选 PNG-8 可能会有毛刺
+- 图片导出：
+	- 打开移动工具，选项里把"自动选择"的勾打上，
+	- 点击要切割的图片，图层面板一般会自动选择图片所在的图层，即使定位不到具体图层，也能定位到图层组
+	- 如果该图片是组合图形，或者有图层效果，或者有一个背景图一个遮罩，则按住 Ctrl 选中多个图层，右键合并图层
+	- 按住 Ctrl 单击图层，Ctrl + C， Ctrl + N, Ctrl + V， Ctrl + Shif + Alt + S
+	
+
+字体大小的设置单位，常用的有2种：px、pt。这两个有什么区别呢？
+先搞清基本概念：px就是表示pixel，像素，是屏幕上显示数据的最基本的点；
+pt就是point，是印刷行业常用单位，等于1/72英寸。
+
+参考链接：
+
+- [PT与PX区别](https://www.douban.com/note/155032221/)
+- [ps标尺和参考线知识点及快捷键](http://www.ittribalwo.com/article/1625.html)
+- [CSS布局——左定宽度右自适应宽度并且等高布局](https://www.w3cplus.com/css/two-cloumn-width-one-fixed-width-one-fluid-width)
+
 # 后台
 
 
