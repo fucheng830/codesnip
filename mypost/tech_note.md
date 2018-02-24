@@ -41,9 +41,6 @@ Web设计初衷是一个静态信息资源发布媒介，通过超文本标记�
 - [Web开发技术发展历史](https://www.tianmaying.com/tutorial/web-history)
 - [Web开发技术的演变](http://blog.jobbole.com/45170/)
 
-经典页面
-
-- [Alloy Timer](http://alloyteam.github.io/AlloyTimer/)
 
 ## 切图
 
@@ -73,11 +70,60 @@ Web设计初衷是一个静态信息资源发布媒介，通过超文本标记�
 先搞清基本概念：px就是表示pixel，像素，是屏幕上显示数据的最基本的点；
 pt就是point，是印刷行业常用单位，等于1/72英寸。
 
+
 参考链接：
 
 - [PT与PX区别](https://www.douban.com/note/155032221/)
 - [ps标尺和参考线知识点及快捷键](http://www.ittribalwo.com/article/1625.html)
+
+
+## 经典页面
+
+- [Alloy Timer](http://alloyteam.github.io/AlloyTimer/)
+- http://www.raiseai.com/
+
+## 常见任务
+
+### 左右等高
+
+- [4 Methods For Creating Equal Height Columns In CSS](http://vanseodesign.com/css/equal-height-columns/)
+- [Fluid Width Equal Height Columns](https://css-tricks.com/fluid-width-equal-height-columns/)
 - [CSS布局——左定宽度右自适应宽度并且等高布局](https://www.w3cplus.com/css/two-cloumn-width-one-fixed-width-one-fluid-width)
+- [Equal Height Column Layouts with Borders and Negative](https://www.smashingmagazine.com/2010/11/equal-height-columns-using-borders-and-negative-margins-with-css/)
+
+
+### 背景图全屏
+
+```
+html,body{
+    width:100%;
+    height:100%
+}
+
+body{
+	width: 100%;
+  	height:auto;
+	background:#343434 url("../../assets/img/bg.jpg") no-repeat;  
+	background-size: cover;
+}
+```
+
+## 参考链接
+
+- [CSS Stacking Context里那些鲜为人知的坑](http://blog.angular.in/css-stacking-contextli-na-xie-xian-wei-ren-zhi-de-keng/)
+- [HTML 和 Body 在 CSS 中的区别](https://csspod.com/html-vs-body-in-css/)
+- [等宽列背后的表格布局算法](https://csspod.com/table-width-algorithms/)
+- [Appendix D. Default style sheet for HTML 4](https://www.w3.org/TR/CSS2/sample.html)
+- [学习CSS布局](https://www.w3cplus.com/css/learn-css-layout.html)
+- [w3school HTML 系列教程](http://www.w3school.com.cn/h.asp)
+- [CSS参考手册](http://www.css88.com/book/css/)
+- [10 个最常见的 JavaScript 错误（以及如何避免它们）](http://www.css88.com/archives/9184)
+
+## todo
+
+- rem
+
+
 
 # 后台
 
@@ -90,12 +136,15 @@ pt就是point，是印刷行业常用单位，等于1/72英寸。
 
 InfraredCounterParser InfraredCounterHandler InfraredCounterSender 等字符串，取出最后一个单词，如Parser, Handler, Sender 等
 
+中英文混排，如何在英文和数字两边增加空格
+
 # 数据库
 # 网络
 
 # Java
 
-[Google Guava官方教程（中文版）](http://ifeve.com/google-guava/)
+- [Google Guava官方教程（中文版）](http://ifeve.com/google-guava/)
+- [Windows7下Maven环境搭建及其使用](http://blog.csdn.net/xuexiaoxu1990/article/details/52882664)
 
 ## 环境变量配置
 
@@ -372,7 +421,9 @@ PATH  = %JAVA_HOME%/bin;%JAVA_HOME%/jre/bin
 
 ## 其它
 
-[f.lux - 全天候保护眼睛健康软件！自动调整屏幕色温减少蓝光防疲劳，长时间玩电脑必备！](https://www.iplaysoft.com/flux.html)
+- [f.lux - 全天候保护眼睛健康软件！自动调整屏幕色温减少蓝光防疲劳，长时间玩电脑必备！](https://www.iplaysoft.com/flux.html)
+- [MarkDown 写 ppt](https://yhatt.github.io/marp/)
+- [在线根据 markdown 生成 ppt](http://www.vmfor.com/ppt/index.html)
 
 ## 编辑器
 
@@ -555,6 +606,48 @@ RS232标准中的RTS与CTS：即请求发送/清除发送，用于半双工时�
 
 上拉就是将不确定的信号通过一个电阻钳位在高电平，电阻同时起限流作用。下拉同理，也是将不确定的信号通过一个电阻钳位在低电平。
 
+# 企业信息化
+
+大多数OA产品功能集中在信息共享、行政办公领域，一些主流OA系统虽然引入了工作流，但相对比较封闭，开放性和扩展性不够。
+
+BPM是一个开放性平台，不仅能实现所有OA的功能，还能满足企业内部系统之间集成的需求，在BPM引擎驱动下，企业的流程终会形成一个闭环。
+
+ERP
+
+WMS
+
+MES
+
+ESB
+
+SOA
+
+- [智能MES解决方案](http://www.rtdsoft.com/channels/57.html)
+- [制造执行系统(MES)选型与实施指南简版](https://wenku.baidu.com/view/052b5ef4a32d7375a41780c8.html)
+- [OpenMES架构说明书](https://wenku.baidu.com/view/2a98711ec281e53a5802ffc8.html)
+
+## 快速开发框架
+
+- 登录注册: Apache Shiro 
+- 组织机构
+- 权限管理: Apache Shiro 
+- 增删改查
+- 后台界面
+- 菜单管理
+- 工作流：Activity
+- 报表：JasperReports
+
+参考
+
+- http://www.jeecg.org/
+- [Java通用权限系统管理（Spring+springMVC+ibatis+Angularjs）](http://46aae4d1e2371e4aa769798941cef698.devproxy.yunshipei.com/liaodehong/article/details/53100313)
+- [组织机构对象模型设计及实现](http://blog.csdn.net/wangpeng047/article/details/7280800)
+- [LigerUI 快速开发UI框架](http://www.ligerui.com/)
+- https://github.com/thinkgem/jeesite
+
+jeesite应用实战（数据增删改查），认真读完后10分钟就能开发一个模块
+http://blog.csdn.net/qing_gee/article/details/76223064
+
 
 # 未整理
 
@@ -569,3 +662,8 @@ http://blog.csdn.net/pkueecser/article/details/50610796 时间序列数据库的
 https://github.com/justjavac/ReplaceGoogleCDN Replace Google CDN
 
 https://stackoverflow.com/questions/31572580/how-covert-c-sharp-datetime-to-java-datetimeusing-joda-time
+https://pine.fm/LearnToProgram/
+http://www.qdaily.com/articles/42060.html
+https://zh.wikihow.com/%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B
+
+nginx waf
