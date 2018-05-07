@@ -70,6 +70,8 @@ Web设计初衷是一个静态信息资源发布媒介，通过超文本标记�
 先搞清基本概念：px就是表示pixel，像素，是屏幕上显示数据的最基本的点；
 pt就是point，是印刷行业常用单位，等于1/72英寸。
 
+合并拷贝，背景导出
+
 
 参考链接：
 
@@ -83,6 +85,19 @@ pt就是point，是印刷行业常用单位，等于1/72英寸。
 - http://www.raiseai.com/
 
 ## 常见任务
+垂直居中
+
+```
+parentElement{
+	position:relative;
+}
+
+childElement{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+```
 
 ### 左右等高
 
@@ -667,3 +682,258 @@ http://www.qdaily.com/articles/42060.html
 https://zh.wikihow.com/%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B
 
 nginx waf
+
+前端系列教程
+https://chuanke.baidu.com/s5508922.html
+http://growth.phodal.com/
+
+关于PHP程序员解决问题的能力
+http://www.cnblogs.com/phpworld/p/8038581.html
+ZH奶酪：编程语言入门经典100例【Python版】
+http://www.cnblogs.com/CheeseZH/archive/2012/11/05/2755107.html
+https://www.coursera.org/learn/python
+
+JavaScript专题之惰性函数 https://segmentfault.com/a/1190000010783034
+关于尾递归的问题 https://segmentfault.com/q/1010000002705723
+
+var pi = 3.14;
+function area(r) { return 2 * pi * r;}
+function iseven(n) {return n % 2 == 0;}
+
+function range(n, m) { console.log(n); (n < m) ? range(n + 1, m) : null;}
+function rangef(n, m, f) { f(n);  (n < m) ? rangef(n + 1, m, f) : null;}
+function rangesum(n, m, sum) { return n < m ? n + rangesum(n + 1, m, sum) : n + sum; }
+function rangesumf(n, m, sum, f) { return n < m ? f(n) + rangesumf(n + 1, m, sum, f) : f(n) + sum; }
+function rangecond(n, m, cond) { cond(n) ? console.log(n) : null; (n < m) ? rangecond(n + 1, m, cond) : null;}
+
+7 of the Best Code Playgrounds
+https://www.sitepoint.com/7-code-playgrounds/
+
+Beginning Programming For Dummies
+https://www.amazon.com/Beginning-Programming-Dummies-Wallace-Wang/dp/0470088702
+jQuery File Upload跨域上传
+https://www.cnblogs.com/ZHF/p/5057416.html
+Javascript知识点：IIFE - 立即调用函数
+https://linghucong.js.org/2016/04/25/2016-04-08-Javascript-IIFE/
+技术面试需要掌握的基础知识
+https://github.com/CyC2018/Interview-Notebook
+
+### 函数组合
+function rangei(n) {
+	var i = 0;
+	return function() {
+		var ret = i < n ? i : null;
+		i = i + 1;
+		return ret;
+	};
+}
+
+function mapi(i, f) {
+	return function () {
+		var t = i();
+		return t == null ? null : f(t);
+	};
+}
+
+function filteri(i, c) {
+	return function inner() {
+		var t = i();
+		return t == null ? null : c(t) ? t : inner(); 
+	};
+}
+
+function reducei(i, f, init_val) {
+	var t = i();
+	return t == null ? init_val : reducei(i, f, f(init_val, t));
+}
+	
+function iseven(x) {
+	return x % 2 == 0; 
+}
+
+function sqr(x) {
+	return x * x;
+}
+
+function add(x, y) {
+	return x + y;
+} 
+
+//10 以内偶数的平方和
+reducei(mapi(filteri(rangei(10), iseven), sqr), add, 0)
+
+Jquery mobile change page
+https://stackoverflow.com/questions/9738948/jquery-mobile-change-page
+The Truth About Multiple H1 Tags in the HTML5 Era
+https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824
+
+How to set up Spark on Windows?
+https://stackoverflow.com/questions/25481325/how-to-set-up-spark-on-windows
+
+
+Git for windows 中文乱码解决方案
+https://segmentfault.com/a/1190000000578037
+Best way to find if an item is in a JavaScript array? [duplicate]
+https://stackoverflow.com/questions/143847/best-way-to-find-if-an-item-is-in-a-javascript-array
+后台管理UI的选择
+https://www.cnblogs.com/webenh/p/5815732.html
+
+配置 PHP 错误日志
+
+mkdir /data/logs/php
+chown apache:apache /data/logs/php
+
+php-fpm.conf：
+
+    [global]
+    ; php-fpm pid文件
+    pid = /usr/local/php/var/run/php-fpm.pid
+    ; php-fpm 错误日志路径
+    error_log = /data/logs/php/error.log
+    ; php-fpm 记录错误日志等级
+    log_level = notice
+    [www]
+    ; 记录错误到php-fpm的日志中
+    ;catch_workers_output = yes
+    ; 慢日志
+    slowlog = /data/logs/php/www-slow.log
+    ; 关闭打印日志
+    php_flag[display_errors] = off
+    ; 错误日志
+    php_admin_value[error_log] = /data/logs/php/www-error.log
+    ; 记录错误
+    php_admin_flag[log_errors] = on
+    ; 内存使用量
+    php_admin_value[memory_limit] = 32M
+
+php.ini：
+
+    ; 错误日志
+    log_errors = On
+    ; 显示错误
+    display_errors = Off
+    ; 日志路径
+    error_log = "/usr/local/lnmp/php/var/log/error_log"
+    ; 错误等级
+    error_reporting = E_ALL&~E_NOTICE
+    
+    
+nginx 路径匹配测试
+
+    location /test {
+        add_header Content-Type text/html;
+        return 200 'hello';
+    }
+
+nginx php 测试
+
+    chmod o+x /root
+    chmod o+x /root/haohu
+    chmod o+x /root/haohu/phptest
+    
+    location ~ /test$ {
+        fastcgi_pass   127.0.0.1:9000;
+        include        fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /root/haohu/phptest/test.php;
+    }
+    
+nginx 日志格式
+
+    log_format  main  '$time_iso8601 $status $request_time $upstream_response_time $remote_addr '
+                      '"$request" $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+                      
+日志滚动
+    /var/log/nginx/*.log
+    /data/log/nginx/*.log
+    /data/logs/techaction/*.php
+    /data/logs/php/*.log
+    /var/log/php-fpm/*log
+    {
+        daily
+        rotate 30
+        missingok
+        notifempty
+        compress
+        sharedscripts
+
+        postrotate
+            /bin/kill -USR1 `cat /run/nginx.pid 2>/dev/null` 2>/dev/null || true
+                /bin/kill -SIGUSR1 `cat /var/run/php-fpm/php-fpm.pid 2>/dev/null` 2>/dev/null || true
+        endscript
+    }
+                      
+    
+Linux日志文件总管——logrotate
+https://linux.cn/article-4126-1.html
+Linux中find常见用法示例
+http://www.cnblogs.com/wanqieddy/archive/2011/06/09/2076785.html
+
+找到 /data/logs 目录下所有 15 天之前修改过的 .php 和 .log 文件删除掉，删除前加确认，去掉确认的话，把 -ok 改成 -exec
+find /data/logs/ -type f \( -name '*.php' -o -name '*.log' \)  -mtime +15 -print -ok rm  {} \;    
+
+
+
+防止文件误删：http://www.cnblogs.com/lihaozy/archive/2012/08/17/2643784.html
+
+    mkdir -p ~/.trash
+    alias rm=trash  
+    alias r=trash  
+    alias rl='ls ~/.trash'
+    alias ur=undelfile
+
+    undelfile()
+    {
+      mv -i ~/.trash/$@ ./
+    }
+
+    trash()
+    {
+      mv $@ ~/.trash/
+    }
+    
+    cleartrash()
+    {
+        read -p "clear sure?[n]" confirm
+        [ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /usr/bin/rm -rf ~/.trash/*
+    }
+    
+[译] Node.js 8: util.promisify()
+https://segmentfault.com/a/1190000009743481
+Node.js Async Best Practices & Avoiding the Callback Hell
+https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/
+Nodejs 中使用 Async/Await
+https://www.jianshu.com/p/0837dde8dcd5
+
+promisify + async 
+
+    (async () => {
+      const fs = require('fs');
+      const util = require('util');
+
+      const readFile = util.promisify(fs.readFile);
+
+      const txt = await readFile('./notes.txt');
+      console.log(txt);
+    })();
+    
+好吧，CSS3 3D transform变换，不过如此！    
+http://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/    
+客栈说书：CSS遮罩CSS3 mask/masks详细介绍
+http://www.zhangxinxu.com/wordpress/2017/11/css-css3-mask-masks/
+新手应该如何学习 PHP 语言？
+https://www.zhihu.com/question/20003635/answer/338733500
+目前最详细的PHP培训课程安排
+http://baijiahao.baidu.com/s?id=1563138980186749&wfr=spider&for=pc
+
+CSS3 box-pack 属性
+http://www.w3school.com.cn/cssref/pr_box-pack.asp
+设计一个灵活的、可维护CSS和SVG饼图SVG
+https://www.jianshu.com/p/f6526355de54
+SVG中stroke-dasharray及stroke-dashoffset属性
+https://blog.csdn.net/u014291497/article/details/78409350   
+纯CSS实现帅气的SVG路径描边动画效果
+http://www.zhangxinxu.com/wordpress/2014/04/animateion-line-drawing-svg-path-%E5%8A%A8%E7%94%BB-%E8%B7%AF%E5%BE%84/
+
+https://secbone.com/
+https://github.com/Secbone
