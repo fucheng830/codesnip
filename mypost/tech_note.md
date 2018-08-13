@@ -844,6 +844,7 @@ nginx 日志格式
                       '"$http_user_agent" "$http_x_forwarded_for"';
                       
 日志滚动
+
     /var/log/nginx/*.log
     /data/log/nginx/*.log
     /data/logs/techaction/*.php
@@ -937,3 +938,396 @@ http://www.zhangxinxu.com/wordpress/2014/04/animateion-line-drawing-svg-path-%E5
 
 https://secbone.com/
 https://github.com/Secbone
+
+# 快速学习一门语言
+- 打字练习：
+    - 数字，字母，下划线
+    - 标点符号：+-*/\%(){};"',.!<>[]?^|
+- 输出
+    - 打印字符串
+    - 打印数字
+    - 混合打印
+    - 输出复杂信息
+    - 格式化输出    
+- 字符串连接
+- 数学运算: + - * / %
+- 关系运算: > < == != >= <=
+- 逻辑运算: && || !
+- 变量和赋值: =
+- 条件语句和关系操作符：两个数谁最大
+- 多重条件语句和逻辑操作符：三个数谁最大
+- 循环语句：打印 5 次 Hello
+- for 循环：打印 10 以内的偶数
+- 数组基本操作
+    - 打印数组
+    - 获取数组长度
+    - 获取指定索引元素
+    - 修改指定索引元素的值
+    - 数组末尾增加元素
+    - 某元素是否存在
+    - 遍历数组
+    - 删除指定索引元素
+    - 重排数组
+    - 任意位置插入元素
+    - 连接成字符串
+    - 练习
+        - 找出一个数组中最大的数
+        - 找出一个数组中最大的奇数
+        - 求出数组中所有奇数的和
+- 字符串基本操作
+    - 字符串长度
+    - 字符串连接
+    - 转换大小写
+    - 去掉首尾指定字符
+    - 用某字符在首尾填充    
+    - 分割成数组
+    - 比较两个字符串
+    - 获取某子串的位置
+    - 是否存在某个子串
+    - 替换某个子串
+    - 获取子串
+    - 是否以某子串开头或结尾
+    - 练习
+        - 判断某字符是否为大写
+        - 把字符串中的每个单词首字母大写
+        - 按大写字母分割字符串
+- 字典基本操作
+    - 根据键获取值
+    - 添加键值对
+    - 修改键值对
+    - 删除指定键
+    - 某键是否存在
+    - 遍历字典
+- 时间操作
+    - 设置时区
+    - 获取当前时间的时间戳
+    - 获取当前时间格式化字符串
+- 文件操作：打开并逐行读取文件
+- 类型判断
+    - 是否为数字
+    - 是否为整型
+    - 是否为浮点数
+    - 是否为字符串
+    - 是否为 null
+    - 是否为 数组
+    - 是否为空
+- 类型转换
+    - 数字转字符串
+    - 字符串转数字
+- 函数
+    - 函数定义和使用
+    - 匿名函数和闭包
+    - 返回函数的函数
+    - 参数为函数的函数
+    - 函数的递归调用
+- 面向对象
+    - 类
+    - 方法
+    - 字段
+    - 静态字段
+    - 子类
+
+数组:
+- get set remove insert length 
+- push pop shift unshit slice indexof
+- startswitch endswitch contains
+- map filter reduce
+- removeCond groupby sortby countby
+
+字典
+- add set get remove
+树
+
+输入输出文件
+
+Android Studio:
+
+- 下载带 Sdk 版本
+- 修改字体
+- 修改编码
+- 自动提示快捷键修改
+- 去掉拼写检查
+- 设置 git 目录
+- 禁用不需要的插件
+- 自动导入
+- File –> Other Settings –> Default Project Structure
+- idea.properties  disable.android.first.run=true
+- ANDROID_SDK_HOME 环境变量指向 D:\android-home 把 .android 目录拷过去
+- 禁止自动打开上次的工程
+- 禁止代码折叠
+
+Android:
+
+- 加载中效果
+- 短暂提示
+- 网络访问要用AsyncTask
+- 小图标
+- 全局错误挂接
+- 优雅退出
+- 打日志
+- 每页的标题
+- 返回按钮
+- 导航条一直存在
+
+
+安卓异步任务类AsyncTask——突出一个简单、好用
+https://blog.csdn.net/jerrycqu/article/details/49357191
+Android OkHttp的基本用法
+https://www.jianshu.com/p/c478d7a20d03
+Toolbar的简单使用
+https://blog.csdn.net/monalisatearr/article/details/78415585
+ListView中自定义adapter的封装
+https://www.cnblogs.com/smyhvae/p/4477079.html
+Gson解析——从简单数据到复杂数据
+https://www.jianshu.com/p/886f7b7fca7d
+LoadingBar - 如何更优雅的使用Loading
+https://blog.csdn.net/aa464971/article/details/70197394
+NavigationView的使用
+https://blog.csdn.net/bskfnvjtlyzmv867/article/details/70245826
+Android中处理崩溃异常
+https://blog.csdn.net/liuhe688/article/details/6584143
+
+
+
+
+Android Studio 入门级教程（
+https://www.cnblogs.com/abao0/archive/2017/06/02/6934023.html
+
+详解 Android 的 Activity 组件
+https://www.ibm.com/developerworks/cn/opensource/os-cn-android-actvt/
+Android之自定义Adapter的ListView
+http://www.cnblogs.com/topcoderliu/archive/2011/05/07/2039862.html
+想写个app，在哪里可以找到icon素材？
+https://www.zhihu.com/question/40639915?sort=created
+https://github.com/konifar/android-material-design-icon-generator-plugin
+Android学习 - 美化ListView
+https://blog.csdn.net/wolflz/article/details/45078107
+Android开发之漂亮Button样式
+https://www.jianshu.com/p/e5e8a98fc5d9
+
+
+图标制作
+https://www.iconfinder.com/editor/
+https://www.flaticon.com/free-icons/programming-language/2
+https://glyphter.com/
+https://www.shutterstock.com/zh/image-vector/workplace-programmer-coder-desktop-pc-laptop-705161689?src=Kd61QRsGtq1hI9vEL7LU2w-1-49
+https://iconsflow.com/editor
+
+APP第三方微信登录与公众号数据打通
+https://www.jianshu.com/p/18b1288f4c41
+
+Flex 布局教程：语法篇
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+Flex 布局教程：实例篇
+http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+
+Programmed Lessons in QBasic
+http://chortle.ccsu.edu/QBasic/index.html
+中等职业教育国家规划教材·编程语言基础：QBASIC语言（计算机及应用专业）
+https://item.jd.com/10493424.html
+
+wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz
+
+tar -xzvf node-v8.9.3-linux-x64.tar.gz
+tar -xvf node-v8.9.3-linux-x64.tar
+ln -s /root/node-v8.9.3-linux-x64/bin/node /usr/local/bin/node
+ln -s /root/node-v8.9.3-linux-x64/bin/npm /usr/local/bin/npm
+npm -v
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+$ sudo npm install forever -g   #安装
+$ forever start app.js          #启动
+$ forever stop app.js           #关闭
+$ forever start -l forever.log -o out.log -e err.log app.js   #输出日志和错误
+
+
+## Apache backend for www.quancha.cn ##
+upstream apachephp  {
+    server ip:8080; #Apache
+}
+ 
+## Start www.quancha.cn ##
+server {
+    listen 80;
+    server_name  www.quancha.cn;
+ 
+    access_log  logs/quancha.access.log  main;
+    error_log  logs/quancha.error.log;
+    root   html;
+    index  index.html index.htm index.php;
+ 
+    ## send request back to apache ##
+    location / {
+        proxy_pass  http://apachephp;
+ 
+        #Proxy Settings
+        proxy_redirect     off;
+        proxy_set_header   Host             $host;
+        proxy_set_header   X-Real-IP        $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
+        proxy_max_temp_file_size 0;
+        proxy_connect_timeout      90;
+        proxy_send_timeout         90;
+        proxy_read_timeout         90;
+        proxy_buffer_size          4k;
+        proxy_buffers              4 32k;
+        proxy_busy_buffers_size    64k;
+        proxy_temp_file_write_size 64k;
+   }
+}
+
+How to easily convert utf8 tables to utf8mb4 in MySQL 5.5
+https://dba.stackexchange.com/questions/8239/how-to-easily-convert-utf8-tables-to-utf8mb4-in-mysql-5-5
+
+不翻墙也能找到免费优质素材，7个免费商用素材库墙裂推荐
+https://zhuanlan.zhihu.com/p/28508804
+
+微服务分布式事务Saga模式简介
+http://www.jdon.com/49307
+
+大数据告诉你：为啥近5年来Python如此火爆？
+https://www.sohu.com/a/196290953_704222
+kvm管理平台webvirtmgr的部署
+https://www.jianshu.com/p/160272d81ac3
+Comfortable interface for KVM? (with PCIe Passthrough)
+https://www.centos.org/forums/viewtopic.php?t=52640
+
+CentOS之7与6的区别
+https://www.cnblogs.com/Csir/p/6746667.html
+开源虚拟化管理平台Ovirt简介和配置环境搭建
+https://www.2cto.com/os/201202/120678.html
+libvirt apps
+https://libvirt.org/apps.html#web
+十分钟带你理解Kubernetes核心概念
+http://dockone.io/article/932
+使用 Docker/LXC 迅速启动一个桌面系统
+https://www.oschina.net/question/54100_137626
+在Docker中运行桌面应用
+https://yq.aliyun.com/articles/224645#
+docker-desktop
+https://github.com/rogaha/docker-desktop
+图形化界面的 docker ?
+https://www.zhihu.com/question/34493859
+Windows Docker 安装
+http://www.runoob.com/docker/windows-docker-install.html
+https://blog.csdn.net/tina_ttl/article/details/51372604
+后端架构师技术图谱
+https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84
+
+termtosvg
+A Linux terminal recorder written in Python that renders your command line sessions as standalone SVG animations.
+https://github.com/nbedos/termtosvg
+
+如何编写技术解决方案
+https://wenku.baidu.com/view/b42e31a1760bf78a6529647d27284b73f2423635.html?from=search
+
+p5.js 
+http://ofcourse.io/biao-ti-3/
+
+腾讯云 使用DockerHub加速器
+https://cloud.tencent.com/document/product/457/9113
+理解Docker（7）：Docker 存储 - AUFS
+https://www.cnblogs.com/sammyliu/p/5931383.html
+［授权发表］基于 ssh + Xpra 构建 Docker 桌面系统
+https://blog.csdn.net/tinylab/article/details/45443563
+CentOS6下docker的安装和使用
+https://www.cnblogs.com/zhangzhen894095789/p/6641981.html?utm_source=itdadao&utm_medium=referral
+
+How to stop docker pull
+https://stackoverflow.com/questions/29486032/how-to-stop-docker-pull
+DOCKER_OPTS do not work in config file /etc/default/docker
+https://stackoverflow.com/questions/27763340/docker-opts-do-not-work-in-config-file-etc-default-docker
+
+Set Docker_Opts in centos
+https://stackoverflow.com/questions/26166550/set-docker-opts-in-centos
+
+vi /etc/sysconfig/docker
+    OPTIONS=--registry-mirror=https://mirror.ccs.tencentyun.com
+sudo service docker restart
+
+netstat -tnpl
+CONTAINER_ID=$(sudo docker run -d -p 2222:22 rogaha/docker-desktop)
+
+echo $(sudo docker logs $CONTAINER_ID | sed -n 1p)
+User: docker Password: eengoch3ooK5
+docker port $CONTAINER_ID 22
+
+/sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT 
+/sbin/iptables -I INPUT -p tcp --dport 22 -j ACCEPT 
+
+然后保存： 
+
+/etc/rc.d/init.d/iptables save 
+centos 5.3，5.4以上的版本需要用 
+service iptables save 
+
+人人都该学编程？
+https://www.jiemodui.com/Item/22041
+
+How to Install PHP 7 in CentOS 7
+https://www.tecmint.com/install-php-7-in-centos-7/
+
+
+### .vimrc
+
+set nocp
+set ts=4
+set sw=4
+set smarttab
+set et
+set ambiwidth=double
+colo torte
+set nu
+
+set encoding=UTF-8
+set langmenu=zh_CN.UTF-8
+language message zh_CN.UTF-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileencoding=utf-8
+
+
+syntax on
+filetype plugin indent on
+
+### .bashrc
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias vi='vim'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+export LC_ALL='zh_CN.utf8'
+
+
+
+
+
+Programmed Lessons in QBasic
+http://chortle.ccsu.edu/QBasic/index.html  发现这个 qb 教程还挺好的
+
+Shiro的三种授权(十二)
+https://www.cnblogs.com/qlqwjy/p/7257616.html
+走进Java（五）JSTL和EL表达式
+https://blog.csdn.net/u010096526/article/details/50038365
+JSTL获取Parameter参数
+https://blog.csdn.net/kevinxxw/article/details/50884649
+自定义页面方法：${fns:sayHelloToName('zxw')}
+https://blog.csdn.net/zhengxiangwen/article/details/40652019
+JSTL表达式的使用（c:if）以及在JS中使用
+https://blog.csdn.net/weistin/article/details/80027218
+
+
+eclipse ERMaster插件安装 利用ERMaster快速生成db维护文档
+https://my.oschina.net/dajianguo/blog/1622944    
+
+
+Eclipse启动时禁用不必要的验证。
+https://blog.csdn.net/u012726702/article/details/51758596
+
+单词补全 Alt + /
