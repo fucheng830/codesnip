@@ -1331,3 +1331,107 @@ Eclipse启动时禁用不必要的验证。
 https://blog.csdn.net/u012726702/article/details/51758596
 
 单词补全 Alt + /
+
+
+window---->preferences---->general----->content types----->Text------>java properties file---->UTF-8---->update ------>ok
+
+Mybatis整合Spring -- typeAliasesPackage
+https://blog.csdn.net/sky786905664/article/details/51801933
+
+重启 PHP-FPM
+
+sudo kill -usr2 $(cat /var/run/php-fpm/php-fpm.pid)
+查看 PHP 配置
+
+php --ini
+
+解决Setting property 'source' to 'org.eclipse.jst.jee.server的问题
+https://blog.csdn.net/z69183787/article/details/19911935
+
+Tomcat中server.xml配置详解
+https://www.cnblogs.com/yanghua1012/p/5869192.html
+tomcat context元素属性介绍
+http://outofmemory.cn/code-snippet/3035/tomcat-context-element-property-introduction
+tomcat 8.0特性
+https://blog.csdn.net/hmy1106/article/details/51270761
+Tomcat 7 的七大新特性
+http://www.iteye.com/news/17928/
+Tomcat 5.5.x到Tomcat 6.0（tomcat6新特性及变化）
+https://blog.csdn.net/wlanye/article/details/8570891
+
+SpringMVC重要注解（四）@ModelAttribute
+https://blog.csdn.net/lovesomnus/article/details/78873089
+java怎么用一行代码初始化ArrayList
+https://www.itstrike.cn/Question/e74b36fa-c01f-4254-87ec-e549df2abebe.html
+
+JS 物理引擎
+Physics engine in your JavaScript program
+http://slicker.me/javascript/matter.htm
+黑苹果
+https://github.com/kholia/OSX-KVM
+命令行下的电子表格
+https://github.com/andmarti1424/sc-im
+A*
+http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
+可视化
+https://qiao.github.io/PathFinding.js/visual/
+游戏算法
+https://www.redblobgames.com/
+4种方法让SpringMVC接收多个对象
+https://blog.csdn.net/lutinghuan/article/details/46820023
+Objects binding in Spring MVC form
+https://stackoverflow.com/questions/10138715/objects-binding-in-spring-mvc-form
+Spring 4 官方文档学习 Web MVC 框架
+https://www.cnblogs.com/t3306/p/7244134.html
+Allow binding=false on @ModelAttribute
+https://github.com/spring-projects/spring-framework/commit/2e7470b27f0eaae042334cd86f212cd958676be0
+SpringMVC<from:form>表单标签和<input>表单标签简介
+https://blog.csdn.net/hp_yangpeng/article/details/51906654
+Myths about /dev/urandom
+https://www.2uo.de/myths-about-urandom
+With Undefined Behavior, Anything is Possible
+https://raphlinus.github.io/programming/rust/2018/08/17/undefined-behavior.html
+How to Read 100s of Millions of Records per Second from a Single Disk
+https://clemenswinter.com/2018/08/13/how-read-100s-of-millions-of-records-per-second-from-a-single-disk/
+Introduction to Go Modules
+https://roberto.selbach.ca/intro-to-go-modules/
+
+轻量级前端框架
+https://mithril.js.org/
+
+Docker的web端管理平台对比（DockerUI 、Shipyard、Portainer、Daocloud）
+https://blog.csdn.net/qq273681448/article/details/75007828
+Docker可视化管理工具Portainer的安装配置及使用
+https://blog.csdn.net/bbwangj/article/details/80973219
+Swarm -- 搭建Docker集群
+https://blog.csdn.net/a632189007/article/details/78756339
+
+How to use UTF-8 in resource properties with ResourceBundle
+https://stackoverflow.com/questions/4659929/how-to-use-utf-8-in-resource-properties-with-resourcebundle
+Eclipse 在线安装properties编辑插件
+https://www.cnblogs.com/DylanZ/p/6428709.html
+
+
+稍等两分钟，就会出现插件列表，选择PropertiesEditor，然后Next.
+
+Where does forever store console.log output?
+https://stackoverflow.com/questions/21021186/where-does-forever-store-console-log-output
+
+forever start -o out.log -e err.log my-script.js
+
+
+Learn You a Haskell for Great Good!
+http://learnyouahaskell.com/chapters
+
+owncloud+collabora 实现网盘在线预览
+https://blog.csdn.net/a295184686/article/details/78632706
+
+Epigrams on Programming
+http://pu.inf.uni-tuebingen.de/users/klaeren/epigrams.html
+
+
+程序员不能把自己全部的时间都用来换钱，而是要拿出20%~40%的可支配时间来学习、尝试和应用新的技术，让自己的技术栈保持连续更新。
+
+
+Guacamole 通过浏览器远程访问服务器
+https://www.jianshu.com/p/ebaba8ca17de
