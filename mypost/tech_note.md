@@ -1435,3 +1435,324 @@ http://pu.inf.uni-tuebingen.de/users/klaeren/epigrams.html
 
 Guacamole 通过浏览器远程访问服务器
 https://www.jianshu.com/p/ebaba8ca17de
+
+vim buffer 操作
+
+:bn -- buffer列表中下一个 buffer　　
+:bp -- buffer列表中前一个 buffer　　
+:b# -- 你之前所在的前一个 buffer
+:bdelete num -- 删除第num编号buffer
+
+JavaScript Space After Function [closed]
+https://stackoverflow.com/questions/9300636/javascript-space-after-function
+基于Docker快速搭建多节点Hadoop集群
+http://dockone.io/article/395
+
+
+How to Setup Single Node Hadoop Cluster Using Docker
+https://linoxide.com/cluster/setup-single-node-hadoop-cluster-docker/
+
+A Road to Common Lisp
+http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/#get-a-lisp
+
+C compiler with support for structs written in Assembly
+https://news.ycombinator.com/item?id=17851311
+
+Oops, I Wrote a C++ Compiler
+https://news.ycombinator.com/item?id=17851293
+
+Double Buffer
+http://gameprogrammingpatterns.com/double-buffer.html
+
+JSCPP, a simple C++ interpreter written in JavaScript 
+https://news.ycombinator.com/item?id=17843293
+
+Ubuntu 16.04 硬盘安装
+https://www.cnblogs.com/dzlixu/p/5e9475c3990d720ca22e18b730b01d57.html
+
+
+## 编程挑战
+
+### 挑战 1：
+
+输出 1000 以内的斐波那契数列，用空格隔开，每行 5 个显示。
+
+### 挑战 2：
+
+假设公司年会抽奖，一等奖1名，二等奖3名，三等奖5名，共100人抽奖，写一个抽奖程序来抽奖。
+奖品不要多发，不要漏发，考虑通用性和边界处理。以后大家工作后肯定会遇到类似场景的。
+
+### 挑战 3：
+
+写程序解析出一个网址的各个部分
+
+比如 https://123.abc.com:8000/hello/world?x=111&y=222&z=333 这个网址要求输出如下
+
+协议: https
+域名: 123.abc.com
+端口: 8000
+路径: /hello/world
+参数: x: 111, y: 222, z: 333
+    
+### 挑战 4 ：
+
+随机生成 100 个 15 以内的随机正整数
+
+1、统计出每个数字出现的次数
+2、统计出出现次数最多和出现次数最少的前三个数字
+3、统计出偶数和奇数各自出现的次数和它们的和
+4、统计出出现次数最多的偶数和奇数
+
+
+
+
+## docker 常用命令
+
+
+    sudo docker build -t sshd:ubuntu2 .
+    sudo docker run -d --name ssh_test -p 10122:22 sshd:ubuntu2
+    sudo docker run -d --name ssh_test2 -P  sshd:ubuntu3
+    sudo docker commit 161f67ccad50 sshd:ubuntu
+    sudo  docker exec -it b1141d7b1937 bash
+
+
+    sudo /home/haohu/.local/bin/wssh --address='0.0.0.0' --port=80
+    ssh root@localhost -p 10122
+    
+    docker run -it sequenceiq/hadoop-docker:2.7.0 /etc/bootstrap.sh -bash
+
+    sudo docker ps -a    
+    docker network create hadoop
+    sudo docker-compose up -d
+    sudo docker-compose stop
+    sudo docker exec -it namenode bash
+
+    hadoop fs -put /etc/issue /
+    hadoop fs -ls /
+    
+
+
+    git pull tencent master --allow-unrelated-oo
+    
+    sudo docker run -d --name novnc -p 6080:80 dorowu/ubuntu-desktop-lxde-vnc
+    
+    sudo docker ps --filter ancestor=sshd:ubuntu2 \
+        --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"
+        
+    sudo docker run -d -p 9000:9000     --restart=always     -v /var/run/docker.sock:/var/run/docker.sock     --name prtainer-test     docker.io/portainer/portainer
+   
+    docker run -m 512m --memory-swap 1G -it -p 58080:8080 --restart=always   
+    --name bvrfis --volumes-from logdata mytomcat:4.0 /root/run.sh  
+    docker update --restart=always xxx  
+    sudo docker run --restart=on-failure:10 redis  
+    
+    sudo docker swarm init --advertise-addr 192.168.1.15
+    docker swarm join-token worker
+    docker swarm join --token SWMTKN-1-2nifhbsha6kzfu7pacy93z1niki425t2f3t807y1kzehxhsval-5zns821bezcby2k1o0v7y946z 192.168.1.15:2377
+    sudo docker node ls
+    
+    sudo docker service create --replicas 1 --name hadoop-test01 sequenceiq/hadoop-docker /etc/bootstrap.sh
+    sudo docker service ps hadoop-test01
+    sudo docker service inspect --pretty hadoop-test01
+    docker service scale helloworld=2
+    sudo docker service rm hadoop-test01
+    
+    docker swarm leave
+    
+    sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ssh.1.uoyp9smajh939e98yc40ygm5z
+
+    
+
+sudo sed -i "s|EXTRA_ARGS='|EXTRA_ARGS='--registry-mirror=http://1d20ae13.m.daocloud.io |g" /var/lib/boot2docker/profile    
+
+Docker(六)：Docker 三剑客之 Docker Swarm
+https://baijiahao.baidu.com/s?id=1598047425152066542&wfr=spider&for=pc
+
+Docker Swarm 部署Mysql/Mariadb高可用主从复制集群
+http://www.chairis.cn/blog/article/90
+
+docker 容器日志清理方案
+http://www.chairis.cn/blog/article/94
+    
+docker应用-5（使用overlay 网络进行容器间跨物理主机通信）
+https://www.jianshu.com/p/4bbaf761fad8
+
+Docker Swarm集群部署实践
+http://www.chairis.cn/blog/article/89    
+
+        
+在使用docker run启动容器时，使用--restart参数来设置：        
+--restart具体参数值详细信息：
+no -  容器退出时，不重启容器；
+on-failure - 只有在非0状态退出时才从新启动容器；
+always - 无论退出状态是如何，都重启容器；
+
+Docker容器开机自动启动
+https://blog.csdn.net/menghuanbeike/article/details/79261828
+
+使用DockerToolbox自动创建Swarm集群+Portainer图形化管理的脚本
+https://blog.csdn.net/CSDN_duomaomao/article/details/73430919
+
+Docker-Hadoop ALL-IN-ONE
+https://www.jianshu.com/p/6bcd72083c08
+
+    
+    
+Docker Container Executor
+https://hadoop.apache.org/docs/r2.7.2/hadoop-yarn/hadoop-yarn-site/DockerContainerExecutor.html
+Docker image for Hadoop
+https://github.com/bigdatafoundation/docker-hadoop    
+
+使用Docker在本地搭建Hadoop分布式集群
+https://www.cnblogs.com/onetwo/p/6419925.html
+将Linux系统的home、var目录迁移到新分区
+https://blog.csdn.net/davidhopper/article/details/79768073
+How do I change the Docker image installation directory?
+https://forums.docker.com/t/how-do-i-change-the-docker-image-installation-directory/1169
+关于docker的15个小tip
+http://www.cnblogs.com/elnino/p/3899136.html
+运行 MapReduce 样例
+https://blog.csdn.net/chengqiuming/article/details/78826143
+
+Docker环境下Hadoop分布式集群搭建
+https://blog.csdn.net/zhangfan1212/article/details/54791334
+
+Docker-Hadoop ALL-IN-ONE
+https://www.jianshu.com/p/6bcd72083c08
+Docker创建私有仓库+SSL+AUTH+WEB
+https://www.jianshu.com/p/d85398240f05
+Docker-Compose入门
+https://blog.csdn.net/chinrui/article/details/79155688
+使用docker部署hadoop hdfs
+http://fatkun.com/2017/12/deploy-hadoop-hdfs-use-docker.html
+
+Docker Machine 是什么？
+https://www.cnblogs.com/sparkdev/p/7044950.html
+
+
+
+
+
+http://npm.taobao.org/mirrors/chromedriver/
+v2.40 Supports Chrome v66-68
+http://npm.taobao.org/mirrors/chromedriver/2.40/notes.txt
+
+Windows下的Jupyter Notebook 安装与自定义启动（图文详解）
+http://www.cnblogs.com/zlslch/p/6984403.html
+
+pip install selenium
+
+Python3.5+selenium操作Chrome浏览器
+https://www.cnblogs.com/drake-guo/p/6188366.html
+
+selenium 安装与 chromedriver安装
+https://www.cnblogs.com/technologylife/p/5829944.html
+
+最详尽使用指南：超快上手Jupyter Notebook
+https://blog.csdn.net/DataCastle/article/details/78890469
+
+Python+Selenium WebDriver API：浏览器及元素的常用函数及变量整理总结
+https://www.cnblogs.com/yufeihlf/p/5764807.html
+
+mkdir ~/.pip/
+
+vi ~/.pip/pip.conf
+
+    [global]
+    index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+    [install]
+    trusted-host=mirrors.aliyun.com
+    
+pip install virtualenv
+virtualenv venv
+echo venv >> .gitignore
+
+pip install Flask
+pip install docker
+pip freeze > requirements.txt
+
+mkdir static
+mkdir templates
+
+. venv/bin/activate
+export FLASK_ENV=development
+export FLASK_APP=dockerweb.py
+flask run --host=0.0.0.0
+
+wssh 目录
+/home/haohu/.local/lib/python2.7/site-packages/webssh
+wssh debug 模式会去掉 csrf 
+sudo /home/haohu/.local/bin/wssh --address='0.0.0.0' --port=8000 --debug=true   
+
+screen -dmS dockerweb
+screen -r dockerweb
+
+
+8天学会Hadoop
+https://ke.qq.com/course/229879
+https://ke.qq.com/course/276816
+https://ke.qq.com/course/287048
+
+
+GRANT ALL PRIVILEGES ON techaction.* TO 'root'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON techaction.* TO 'root'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT ON *.* TO 'readonly'@'localhost' IDENTIFIED BY 'readonly';
+flush privileges;
+
+mysql添加用户、修改权限，修改登录权限ip
+https://www.cnblogs.com/lemon-flm/p/7597879.html
+
+An Introduction to Modern CMake
+https://cliutils.gitlab.io/modern-cmake/
+
+PDF 转换
+https://www.ilovepdf.com/
+
+sudo apt-get update
+sudo apt-get upgrade
+
+（实用）Ubuntu 、CentOS更换国内源
+https://www.cnblogs.com/Security-Darren/p/3947952.html
+
+
+
+curl -o /dev/null -s -w 'status=%{http_code}\ndns-time=%{time_namelookup}s\nconnec-time=%{time_connect}s\nserver-time=%{time_starttransfer}s\ntota-ltime=%{time_total}\ncontent-length=%{size_download}\n' http://techaction.cn
+
+
+
+
+
+
+function reserved_ip($ip)
+{
+    $reserved_ips = array( // not an exhaustive list
+    '167772160'  => 184549375,  /*    10.0.0.0 -  10.255.255.255 */
+    '3232235520' => 3232301055, /* 192.168.0.0 - 192.168.255.255 */
+    '2130706432' => 2147483647, /*   127.0.0.0 - 127.255.255.255 */
+    '2851995648' => 2852061183, /* 169.254.0.0 - 169.254.255.255 */
+    '2886729728' => 2887778303, /*  172.16.0.0 -  172.31.255.255 */
+    '3758096384' => 4026531839, /*   224.0.0.0 - 239.255.255.255 */
+    );
+
+    $ip_long = sprintf('%u', ip2long($ip));
+
+    foreach ($reserved_ips as $ip_start => $ip_end)
+    {
+        if (($ip_long >= $ip_start) && ($ip_long <= $ip_end))
+        {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+var_dump(reserved_ip('127.0.0.1')); // reserved (localhost)
+var_dump(reserved_ip('74.125.140.101')); // not reserved (Google)
+
+
+iView 发布 3.0 版本，以及开发者社区等 5 款新产品
+https://www.v2ex.com/t/475227#reply10
+
+git config --global core.editor vim
+git config --global core.autocrlf true
+git config --global core.safecrlf true
