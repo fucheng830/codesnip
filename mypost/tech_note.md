@@ -1756,3 +1756,102 @@ https://www.v2ex.com/t/475227#reply10
 git config --global core.editor vim
 git config --global core.autocrlf true
 git config --global core.safecrlf true
+
+
+sudo su
+mkdir /data/bakup
+mysqldump -uroot -p --all-databases >/data/bakup/dump-`date +%Y%m%d%H%M%S`.sql
+
+Can I restore a single table from a full mysql mysqldump file?
+https://stackoverflow.com/questions/1013852/can-i-restore-a-single-table-from-a-full-mysql-mysqldump-file
+
+腾讯工程师带你深入解析 MySQL binlog
+https://zhuanlan.zhihu.com/p/33504555
+
+
+ubuntu开启crontab日志记录及解决No MTA installed, discarding output问题
+http://www.pooy.net/ubuntu-open-crontab-logging-and-resolution-no-mta-installed-discarding-output-problem.html
+
+ERROR: Failed to allocate directory watch: Too many open files
+sysctl fs.inotify.max_user_instances=512
+
+
+解决(CRON) info (No MTA installed, discarding output)
+https://blog.csdn.net/win_turn/article/details/53000899
+
+
+像素
+https://art.pixlab.io/#picLoader
+
+linux系统挂载U盘，中文文件名乱码解决方案
+https://www.cnblogs.com/zhouqinxiong/p/3497293.html
+
+Linux下添加新硬盘,分区及挂载
+https://www.cnblogs.com/jiu0821/p/7209825.html
+
+挂载 U 盘
+mount -o iocharset=utf8 /dev/sdb4 /mnt
+
+## 分区
+
+    # 查看分区表，/dev/sda，/dev/sdb 表示硬盘，/dev/sda1, /dev/sda2 表示分区
+    fdisk -l |grep '/dev/sd[abcd]'
+    
+    # 对 /dev/sdb 分区
+    fdisk /dev/sdb
+
+    # 添加新分区
+    n
+    
+    # e 为扩展分区， p 为主分区
+    p
+    
+    # 确认分区起始点，如果是新硬盘，输入 1，一般情况下直接回车
+    1
+    
+    #输入分区大小，以下表示 1G，注意 m 是小写
+    +1024m
+    
+    # 保存分区
+    w
+    
+    # 查看新分好的区
+    fdisk -l
+    
+    # 格式化
+    mkfs -t ext4 -c /dev/sdb1
+    
+    # 挂载
+    mount /dev/sdb1 /www
+    
+    # 查看挂载的分区大小
+    df -TH
+    
+    # 设置为开机自动挂载
+    echo '/dev/sdb1 /www ext4 defaults 1 2' >> /etc/fstab
+    
+
+导出镜像
+docker save -o vnc.tar vnc:0.01    
+    
+查看磁盘 IO    
+iostat -d -x -k 1 | grep -E '(Device|sd[abcd])'
+
+
+docker镜像的导入和导出
+https://blog.csdn.net/x6_9x/article/details/72891404 
+
+
+彻底禁用Chrome的“请停用以开发者模式运行的扩展程序”提示
+提示
+https://www.cnblogs.com/liuxianan/p/disable-chrome-extension-warning.html 真够复 真够复杂的
+
+
+
+## 重装系统
+
+备份
+
+- chrome 收藏夹
+- putty 配置
+- git key
