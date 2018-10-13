@@ -1855,3 +1855,9 @@ https://www.cnblogs.com/liuxianan/p/disable-chrome-extension-warning.html 真够
 - chrome 收藏夹
 - putty 配置
 - git key
+
+
+至强CPU多数都是可以配置多路的，就是多个CPU放在同一个板子上，这一点是i7无法做到的。
+至强E5系列里，四位数字的第一位表示的就是CPU的个数，比如Xeon E5-2696 v3，表示此款CPU支持双路，
+Xeon E5-4655 v3支持四路，那么我给的列表里E5最高配置是Xeon E5-4669 v3，四路，每路18核，每核双线程，
+那么要组装到板子上，在Windows任务管理器里就可以看到壮观的144个核心的场面，
