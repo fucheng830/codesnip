@@ -1861,3 +1861,428 @@ https://www.cnblogs.com/liuxianan/p/disable-chrome-extension-warning.html 真够
 至强E5系列里，四位数字的第一位表示的就是CPU的个数，比如Xeon E5-2696 v3，表示此款CPU支持双路，
 Xeon E5-4655 v3支持四路，那么我给的列表里E5最高配置是Xeon E5-4669 v3，四路，每路18核，每核双线程，
 那么要组装到板子上，在Windows任务管理器里就可以看到壮观的144个核心的场面，
+
+Intel超级大杀器发布:28核56线程桌面CPU,4.3G还不锁频
+http://diy.pconline.com.cn/1180/11808584.html
+
+ubuntu16.04开机启动字符界面
+https://jingyan.baidu.com/article/948f5924ee2a5dd80ff5f9e4.html
+
+非常实用的Linux 系统监控工具
+https://www.cnblogs.com/mengdeep/p/5296991.html
+
+了解VMware预订限制和共享
+Understanding VMware Reservations Limits and Shares
+http://www.vfrank.org/2013/09/19/understanding-vmware-reservations-limits-and-shares/
+
+Docker: 限制容器可用的内存
+http://www.cnblogs.com/sparkdev/p/8032330.html
+
+Docker service Limits and Reservations
+https://stackoverflow.com/questions/38200028/docker-service-limits-and-reservations
+
+浮点算法
+echo "scale=2;$a/$b" | bc
+
+
+Swarm mode: Inspect worker node's container on manager node
+https://stackoverflow.com/questions/39237998/swarm-mode-inspect-worker-nodes-container-on-manager-node
+
+
+Error loading config file XXX.dockerconfig.json permission denied
+https://blog.csdn.net/xukai0110/article/details/80637884
+
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "/home/$USER/.docker" -R
+
+How can I use docker without sudo?
+https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
+
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
+docker ps
+
+How to determine where an environment variable came from
+https://unix.stackexchange.com/questions/813/how-to-determine-where-an-environment-variable-came-from
+
+
+ubuntu 死机，查看日志
+
+
+Linux Kernel panic issue: How to fix hung_task_timeout_secs and blocked for more than 120 seconds problem
+https://www.blackmoreops.com/2014/09/22/linux-kernel-panic-issue-fix-hung_task_timeout_secs-blocked-120-seconds-problem/
+
+
+NO-BREAK SPACE
+https://stackoverflow.com/questions/5237989/nonbreaking-space
+
+
+VNC Tight Encoder - Comparison Results
+http://tightvnc.com/archive/compare.html
+
+Comparing 7 Monitoring Options for Docker
+https://rancher.com/comparing-monitoring-options-for-docker-deployments/
+
+
+一种基于负载预测的DockerSwarm集群资源调度优化方法与流程
+http://www.xjishu.com/zhuanli/55/201710461892.html
+
+运维之我的docker-集群的管理-swarm
+http://blog.51cto.com/nginxs/1894432
+
+Docker Stack Swarm - Service Replicas are not spread for Mutli Service Stack
+https://stackoverflow.com/questions/44868123/docker-stack-swarm-service-replicas-are-not-spread-for-mutli-service-stack
+
+
+https://www.cnblogs.com/aguncn/p/6904522.html
+
+清理Docker占用的磁盘空间
+https://blog.csdn.net/weixin_32820767/article/details/81196250
+
+Docker网络和 overlay跨主机通讯
+http://blog.51cto.com/littledevil/1922922
+
+Docker Swarm 入门：Service Network 管理
+https://www.jianshu.com/p/60bccbdb6af9
+
+
+Battlefield: Calico, Flannel, Weave and Docker Overlay Network
+http://xelatex.github.io/2015/11/15/Battlefield-Calico-Flannel-Weave-and-Docker-Overlay-Network/
+
+
+Demystifying Docker overlay networking
+http://blog.nigelpoulton.com/demystifying-docker-overlay-networking/
+
+DOCKER_OPTS do not work in config file /etc/default/docker
+https://stackoverflow.com/questions/27763340/docker-opts-do-not-work-in-config-file-etc-default-docker
+
+journalctl -xe
+
+金步国作品集 各种手册翻译
+http://www.jinbuguo.com/
+
+分页无截断查看日志
+journalctl -rxn -u docker.service | less
+查看错误日志
+journalctl -p err..alert
+查看内核日志
+journalctl -k
+显示本次启动后的所有日志：
+journalctl -b
+
+journalctl: how to prevent text from truncating in terminal
+https://unix.stackexchange.com/questions/229188/journalctl-how-to-prevent-text-from-truncating-in-terminal
+
+systemd 之 journalctl
+https://www.cnblogs.com/itxdm/p/Systemd_log_system_journalctl.html
+
+Systemd 常规操作与彩蛋
+http://www.cnblogs.com/itxdm/p/Systemd_regular_operation_with_eggs.html
+
+
+DOCKER图形页面管理工具--3种，shipyard最强大，其次是portainer
+https://blog.csdn.net/xl_lx/article/details/81183956
+
+Protect the Docker daemon socket
+docker 进程认证
+https://docs.docker.com/engine/security/https/
+
+Docker security 安全
+https://docs.docker.com/engine/security/security/#kernel-namespaces
+
+
+ 算机专业课一体化支撑平台 北航 CG OJ
+http://www.cjudge.net/FAQs.html
+
+linux开发神器--Tmux
+https://www.cnblogs.com/ArsenalfanInECNU/p/5756763.html
+
+
+tmux new -s monitor
+
+按下 Ctrl-b 后的快捷键如下：
+
+
+% 创建一个水平窗格
+" 创建一个竖直窗格
+方向键切换窗格
+q 显示窗格的编号
+o 在窗格间切换
+ctrl + 方向键， alt + 方向键，切换大小
+b 离开会话，然后可以用 tmux attach 挂载
+x 关闭当前窗格
+
+node js 进程守护神forever
+https://blog.csdn.net/jbboy/article/details/35281225
+
+apt-cache show xserver-xorg | grep Version
+https://superuser.com/questions/366505/how-to-find-out-xorg-version-or-whats-my-xorg-version
+
+htop 快捷键，H 切换用户线程 K 切换内核线程
+
+Why docker uses port numbers from 32768-65535?
+https://stackoverflow.com/questions/40787524/why-docker-uses-port-numbers-from-32768-65535
+
+容器删除后，主机映射给容器的端口为何并立即未回收利用？
+https://segmentfault.com/q/1010000000496866
+
+NGINX as a WebSocket Proxy
+https://www.nginx.com/blog/websocket-nginx/
+
+
+Ganglia 权威指南-安装Ganglia过程
+http://www.cnblogs.com/chris-cp/p/4324392.html
+
+
+
+第2章 rsync(一)：基本命令和用法
+https://www.cnblogs.com/f-ck-need-u/p/7220009.html
+
+rsync -avP /var/www/html/ action@192.168.1.102:/var/www/html
+
+
+Eclipse快捷键 10个最有用的快捷键
+https://blog.csdn.net/lynn349x/article/details/56282704
+
+How to convert an rtf string to text in C#
+https://stackoverflow.com/questions/5634525/how-to-convert-an-rtf-string-to-text-in-c-sharp
+
+grep 和 awk的buffer
+https://blog.csdn.net/csCrazybing/article/details/78096301
+
+How to fix stdio buffering
+http://www.perkin.org.uk/posts/how-to-fix-stdio-buffering.html
+
+
+Bash History Display Date And Time For Each Command
+https://www.cyberciti.biz/faq/unix-linux-bash-history-display-date-time/
+
+
+hadoop 集群 硬件配置
+http://info.ipieuvre.com/article/201506/250.html
+https://www.oschina.net/translate/how-to-select-the-right-hardware-for-your-new-hadoop-cluster
+
+Docker 日志都在哪里？怎么收集？
+https://www.cnblogs.com/YatHo/p/7866029.html
+
+PHP file_get_contents fails to read zip on windows
+https://stackoverflow.com/questions/27405430/php-file-get-contents-fails-to-read-zip-on-windows
+
+baidu ai studio
+http://aistudio.baidu.com/#/projectDetail/35620
+
+百度实验平台
+http://abcinstitute.baidu.com/lab/experiment/list;JSESSIONID=d8d1ce38-2afe-4324-b976-2f908f9dea15
+
+机器学习——15分钟透彻理解感知机
+https://blog.csdn.net/yxhlfx/article/details/79093456
+
+自然语言处理 中文分词 词性标注 命名实体识别 依存句法分析 新词发现 关键词短语提取 自动摘要 文本分类聚类 拼音简繁
+https://github.com/hankcs/HanLP#1-%E7%AC%AC%E4%B8%80%E4%B8%AAdemo
+
+搜狗实验室
+http://www.sogou.com/labs/
+
+word2vec原理推导与代码分析
+http://www.hankcs.com/nlp/word2vec.html
+
+识别数字
+http://www.paddlepaddle.org/documentation/docs/zh/develop/beginners_guide/quick_start/recognize_digits/README.cn.html
+
+PaddlePaddle  新手入门
+http://www.paddlepaddle.org/documentation/docs/zh/1.2/beginners_guide/index.html
+
+Deep Learning（深度学习） 中文版
+https://github.com/exacity/deeplearningbook-chinese
+
+神经网络的四块积木：全连接，激活函数，卷积，池化
+三种神经网络模型：Softmax回归模型，多层感知机模型，卷积神经网络模型
+LeNet-5
+
+三分钟带你对 Softmax 划重点
+https://blog.csdn.net/red_stone1/article/details/80687921
+小白都能看懂的softmax详解
+https://blog.csdn.net/bitcarmanlee/article/details/82320853
+
+Istio是啥？一文带你彻底了解！
+https://www.sohu.com/a/270131876_463994
+
+nginx配合modsecurity实现WAF功能
+https://www.52os.net/articles/nginx-use-modsecurity-module-as-waf.html
+https://www.techrepublic.com/article/how-to-install-and-enable-modsecurity-with-nginx-on-ubuntu-server/
+CentOS Linux下用Nginx和Naxsi搭建Web应用防火墙
+http://blog.cnwyhx.com/centos-nginx-naxsi-install/
+nginx下安装配置naxsi waf防火墙（附完整编译、配置）
+http://f2ex.cn/nginx-installed-configuration-naxsi-waf/
+
+nginx的sql注入过滤配置
+http://blog.itpub.net/30208512/viewspace-1578399/
+
+Nginx 配置格式化小工具
+https://github.com/fangpeishi/ngxfmt
+
+轻松玩转OpenWAF之安装篇.md
+https://github.com/titansec/OpenWAF/blob/master/doc/%E8%BD%BB%E6%9D%BE%E7%8E%A9%E8%BD%ACOpenWAF%E4%B9%8B%E5%AE%89%E8%A3%85%E7%AF%87.md
+
+How to install and enable ModSecurity with NGINX on Ubuntu Server
+https://www.techrepublic.com/article/how-to-install-and-enable-modsecurity-with-nginx-on-ubuntu-server/
+
+
+Compatibility of ModSecurity with NginX waf
+https://stackoverflow.com/questions/44978041/compatibility-of-modsecurity-with-nginx
+
+
+2018-12-27T16:45:54+08:00 404 0.000 - 119.180.52.108 "POST /admin/login HTTP/1.1" 571 "http://techaction.cn/admin/login" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" "-"
+
+
+2018/12/27 16:46:52 [error] 9952#0: *132 open() "/data/release/ytaction/src/public/admin/login" failed (2: No such file or directory), client: 119.180.52.108, server: techaction.cn, request: "POST /admin/login HTTP/1.1", host: "techaction.cn", referrer: "http://techaction.cn/admin/login"
+
+
+How to Install Nginx with libModSecurity and OWASP core rule set on Ubuntu 16
+https://www.hugeserver.com/kb/install-nginx-libmodsecurity-owasp-core-ruleset-ubuntu16/
+
+Ubuntu 16.04上使用libmodsecurity的Nginx和OWASP ModSecurity核心规则
+https://www.howtoing.com/nginx-with-libmodsecurity-and-owasp-modsecurity-core-rule-set-on-ubuntu-1604/
+
+How to Install libmodsecurity + nginx on Ubuntu 14.04
+https://help.dreamhost.com/hc/en-us/articles/223608748-How-to-Install-libmodsecurity-Nginx-on-Ubuntu-14-04
+
+
+斯坦福大学公开课 ：机器学习课程
+http://open.163.com/special/opencourse/machinelearning.html
+百度 AI 课程
+https://ai.baidu.com/paddlepaddle/player?id=13
+
+
+
+Cleaning up docker to reclaim disk space
+https://lebkowski.name/docker-volumes/
+
+#!/bin/bash
+
+    # remove exited containers:
+    docker ps --filter status=dead --filter status=exited -aq | xargs -r docker rm -v
+
+    # remove unused images:
+    docker images --no-trunc | grep '<none>' | awk '{ print $3 }' | xargs -r docker rmi
+
+    # remove unused volumes (needs to be ran as root):
+    find '/var/lib/docker/volumes/' -mindepth 1 -maxdepth 1 -type d | grep -vFf <(
+      docker ps -aq | xargs docker inspect | jq -r '.[]|.Mounts|.[]|.Name|select(.)'
+    ) | xargs -r rm -fr
+    
+    
+    
+CREATE DATABASE IF NOT EXISTS techaction default charset utf8 COLLATE utf8_general_ci; 
+
+Windows远程数据同步工具cwRsync
+https://www.cnblogs.com/l1pe1/p/4901031.html
+
+Netplan – How To Configure Static IP Address in Ubuntu 18.04 using Netplan
+https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/netplan-how-to-configure-static-ip-address-in-ubuntu-18-04-using-netplan.html
+
+apt 下载
+sudo apt-get install -d  network-manager
+apt-offline - offline apt package manager
+apt-zip - Update a non-networked computer using apt and removable media
+apt download <package_name>
+
+https://stackoverflow.com/questions/4419268/how-do-i-download-a-package-from-apt-get-without-installing-it
+
+https://blog.csdn.net/thinktalk/article/details/83716617
+
+Ubuntu中启用关闭Network-manager网络设置问题
+https://blog.csdn.net/weixin_42155195/article/details/80683166
+
+如何在 Linux 上使用网络配置工具 Netplan
+https://linux.cn/article-10095-1.html?pr
+
+ubuntu使用apt-get制作OfflinePackage
+https://blog.csdn.net/ouyangziling/article/details/79056161
+
+
+缺少rsync也可以通过校验和比较文件。
+
+--size-only这意味着rsync将跳过大小匹配的文件，即使时间戳不同。这意味着它将同步比默认行为更少的文件
+
+--ignore-times 这意味着rsync将检查每个文件的和，即使时间戳和文件大小匹配。这意味着它将同步比默认行为更多的文件。
+
+
+rsync “Operation not permitted”
+https://serverfault.com/questions/296587/rsync-operation-not-permitted
+
+函数响应式编程（FRP）思想
+https://blog.csdn.net/fly1183989782/article/details/62053973
+
+漫谈FRP之 其实你早就学过FRP
+http://insights.thoughtworkers.org/frp-series-0-not-new-concept/
+
+函数编程中functor和monad的形象解释
+https://www.jdon.com/idea/functor-monad.html
+
+bootstrap dropdown hover menu
+https://codepen.io/bsngr/pen/frDqh
+
+How to create a collapsing tree table in html/css/js?  树形结构
+https://stackoverflow.com/questions/5636375/how-to-create-a-collapsing-tree-table-in-html-css-js
+
+chrome插件 —— 帮助高度还原设计稿
+https://www.cnblogs.com/joyho/articles/5622760.html
+
+OpenPAI：大规模人工智能集群管理平台
+https://www.msra.cn/zh-cn/news/features/openpai
+
+
+Cython入门到放弃（一）
+https://blog.csdn.net/qtlyx/article/details/80614608
+
+Best approach to encrypt big files with php
+https://stackoverflow.com/questions/16175154/best-approach-to-encrypt-big-files-with-php
+
+Whole File Encryption/Decryption With PHP
+http://monkeylogic.com/whole-file-encryptiondecryption-with-php/
+
+All the crypto code you’ve ever written is probably broken
+https://tonyarcieri.com/all-the-crypto-code-youve-ever-written-is-probably-broken
+
+openssl -aes-128-ecb encryption doesn't match python Crypto.Cipher AES encryption
+https://stackoverflow.com/questions/48410452/openssl-aes-128-ecb-encryption-doesnt-match-python-crypto-cipher-aes-encryptio
+
+A Python-to-PHP compatible AES encryption with openssl_encrypt AES-CBC
+https://stackoverflow.com/questions/40820661/a-python-to-php-compatible-aes-encryption-with-openssl-encrypt-aes-cbc
+
+PHP 加密，Python 解密
+A Python-to-PHP compatible AES encryption with openssl_encrypt AES-CBC
+https://stackoverflow.com/questions/40820661/a-python-to-php-compatible-aes-encryption-with-openssl-encrypt-aes-cbc
+
+云脑科技徐昊：AutoML 工程实践与大规模行业应用
+http://www.lyweixiao.com/5314124/20190105A0YCBV00.html
+
+https://serverfault.com/questions/870568/fatal-error-cant-open-and-lock-privilege-tables-table-storage-engine-for-use
+Fatal error: Can't open and lock privilege tables: Table storage engine for 'user' doesn't have this option
+
+Docker CPU 资源限制——CPU固定核功能测试
+https://www.cnblogs.com/zhenyuyaodidiao/p/5061884.html
+
+Linux下限制进程的CPU利用率
+https://blog.csdn.net/bailyzheng/article/details/51355384
+
+Linux---使用 nice、cpulimit 和 cgroups 限制 cpu 占用率
+https://blog.csdn.net/loyachen/article/details/52167124
+
+How do I install Ubuntu Server (step-by-step)?
+https://askubuntu.com/questions/340965/how-do-i-install-ubuntu-server-step-by-step
+
+H5 游戏引擎
+ phaser，pixi，enchant.js
+
+【blockly教程】第一章 Google Blockly教学应用手册
+https://www.cnblogs.com/scratch8/archive/2018/09/12/9637214.html
+https://www.cnblogs.com/scratch8/category/1299483.html
+https://v.youku.com/v_show/id_XMTg3MTYzNjYzNg==.html
+https://blog.csdn.net/oalevel/article/details/81834837
+
+
+用友T3
+http://www.3322.cc/soft/43731.html
