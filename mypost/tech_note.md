@@ -1561,7 +1561,7 @@ https://www.cnblogs.com/dzlixu/p/5e9475c3990d720ca22e18b730b01d57.html
     
     sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ssh.1.uoyp9smajh939e98yc40ygm5z
 
-    
+
 
 sudo sed -i "s|EXTRA_ARGS='|EXTRA_ARGS='--registry-mirror=http://1d20ae13.m.daocloud.io |g" /var/lib/boot2docker/profile    
 
@@ -2202,7 +2202,7 @@ ubuntu使用apt-get制作OfflinePackage
 https://blog.csdn.net/ouyangziling/article/details/79056161
 
 
-缺少rsync也可以通过校验和比较文件。
+rsync也可以通过校验和比较文件。
 
 --size-only这意味着rsync将跳过大小匹配的文件，即使时间戳不同。这意味着它将同步比默认行为更少的文件
 
@@ -2240,6 +2240,7 @@ https://blog.csdn.net/qtlyx/article/details/80614608
 Best approach to encrypt big files with php
 https://stackoverflow.com/questions/16175154/best-approach-to-encrypt-big-files-with-php
 
+加密解密
 Whole File Encryption/Decryption With PHP
 http://monkeylogic.com/whole-file-encryptiondecryption-with-php/
 
@@ -2286,3 +2287,445 @@ https://blog.csdn.net/oalevel/article/details/81834837
 
 用友T3
 http://www.3322.cc/soft/43731.html
+
+Redis 设计与实现¶
+http://redisbook.com/index.html
+
+技术图书作译者的炼成方法
+http://blog.huangz.me/2017/how-i-became-a-writer-and-translator.html
+
+《Redis in Action》翻译记事
+http://blog.huangz.me/diary/2015/memories-of-redis-in-action-translation.html
+
+分布式监控工具Ganglia 介绍 与 集群部署.
+https://www.cnblogs.com/yuki-lau/p/3201110.html 
+
+数据可视化（三）基于 Graphviz 实现程序化绘图
+https://riboseyim.com/2017/09/15/Visualization-Graphviz/
+
+全面学习Prometheus
+https://www.sohu.com/a/233111809_198222
+
+Cacti：cacti是用php语言实现的一个软件，它的主要功能是用snmp服务获取数据，然后用rrdtool储存和更新数据，当用户需要查看数据的时候用rrdtool生成图表呈现给用户。
+Nagios：Nagios 利用其众多的插件实现对本机和远端服务的监控，当被监控对象出现异常，Nagios 就会及时给管理人员告警。
+Graphite：Graphite 是处理可视化和指标数据的优秀开源工具。它有强大的查询 API 和相当丰富的插件功能设置。
+
+Kibana：Kibana是一个针对Elasticsearch的开源分析及可视化平台，用来搜索、查看交互存储在Elasticsearch索引中的数据
+Grafana：Grafana是一个跨平台的开源的度量分析和可视化工具，可以通过将采集的数据查询然后可视化的展示，并及时通知
+
+Zabbix：zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案
+Ganglia：Ganglia是UC Berkeley发起的一个开源集群监视项目，设计用于测量数以千计的节点。
+Prometheus：Prometheus 将所有信息都存储为时间序列数据，实时分析系统运行的状态、执行时间、调用次数等，以找到系统的热点，为性能优化提供依据。
+
+
+通过建立完善的监控体系，从而达到以下目的：
+
+长期趋势分析：通过对监控样本数据的持续收集和统计，对监控指标进行长期趋势分析。例如，通过对磁盘空间增长率的判断，我们可以提前预测在未来什么时间节点上需要对资源进行扩容。
+对照分析：两个版本的系统运行资源使用情况的差异如何？在不同容量情况下系统的并发和负载变化如何？通过监控能够方便的对系统进行跟踪和比较。
+告警：当系统出现或者即将出现故障时，监控系统需要迅速反应并通知管理员，从而能够对问题进行快速的处理或者提前预防问题的发生，避免出现对业务的影响。
+故障分析与定位：当问题发生后，需要对问题进行调查和处理。通过对不同监控指标以及历史数据的分析，能够找到并解决根源问题。
+数据可视化：通过可视化仪表盘能够直接获取系统的运行状态、资源使用情况、以及服务运行状态等直观的信息。
+
+
+elk
+日志存几天，可以按天分区的，定时删
+其它运维指标和运营指标存的时间比较久
+单元测试和拨测成功率都扔es里，每天发报表到小组邮件里
+还有每天的 Error 日志 loggerName， 慢速 api，慢速 sql 的top 10
+每个规模指标，收入指标，LoggerName，API 性能，慢 SQL 都有对应负责人
+日志组件是 error 日志 es, db，本机文本都记一份，warning 日志只记 es 和 本机文本，debug 只记录到本机
+查问题先查 db，然后es，最后写了个分布式 grep  可以在web界面上对多台机器上同时进行 grep，前提是每台机器的日志的相对路径是一样的，而且使用者在cmdb里有这几台机器的权限。
+
+
+【技能】小白耳机维修入门--各种耳机插头接线图--耳机维修汇总贴
+https://www.cnblogs.com/tony-ning/p/7445761.html
+
+科普帖：深度学习中GPU和显存分析
+https://blog.csdn.net/liusandian/article/details/79069926
+深度学习需要的显卡配置
+https://blog.csdn.net/pjh23/article/details/83513066
+【深度学习】为什么深度学习需要大内存？
+https://blog.csdn.net/shenxiaolu1984/article/details/71522141
+
+Docker环境下玩转GPU(一)
+https://www.jianshu.com/p/2442394a934e?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
+ML之NN：BP solve XOR Problem
+https://blog.csdn.net/qq_41185868/article/details/80789982
+【机器学习】神经网络实现异或（XOR）
+http://www.cnblogs.com/Belter/p/6711160.html
+
+不用算术运算符实现两个数的加法(按位异或)
+http://www.cnblogs.com/houjun/p/4908725.html
+
+
+Codeup墓地 Online Judge FAQ
+http://codeup.cn/faqs.php
+OnlineJudge 2.0
+https://github.com/QingdaoU/OnlineJudge/blob/master/README-CN.md
+模型评估指标AUC（area under the curve）
+https://blog.csdn.net/liweibin1994/article/details/79462554
+
+
+获取 group by 后的序号，第几组的第几条数据：
+        
+SELECT 
+@exp_number:=CASE WHEN @task_id=task_id THEN @exp_number+1 ELSE 1 END AS exp_number,
+@task_number:=CASE WHEN @exp_number = 1 THEN @task_number+1 ELSE @task_number END AS task_number,
+@task_id:=task_id AS task_id,
+CONCAT(@task_number, '.', @exp_number) AS seq,
+exp_id
+FROM exp_course_class,(SELECT @task_number:=0, @exp_number:=0,@task_id:='') AS t
+WHERE course_id = 41 AND class_id = 40 GROUP BY  task_id, pos, exp_id 
+ORDER BY task_id, pos, task_number, exp_number;       
+
+线性代数——向量、向量加法、向量数乘
+https://blog.csdn.net/Fancy_Real/article/details/79944916
+线性代数的本质学习笔记（1）：向量、线性组合、张成（SPAN）、线性变换
+https://blog.csdn.net/dugudaibo/article/details/78714668
+
+矩阵-DirectX与OpenGL的不同
+http://www.cnblogs.com/graphics/archive/2012/08/02/2616017.html
+
+## 数学
+物理专业：向量是空间中的箭头，由长度和方向决定。可以自由移动；数学专业：向量可以是任何东西，只保证向量加法和数乘运算有意义；计算机专业：向量是有序的数字列表，起始点在原点上。
+
+所有可以表示为给定向量线性组合的向量集合被称为给定向量张成的空间。
+
+两个向量在三维空间中往往构成的是一个平面，有的时候也可能是一个直线。三个向量一般在三维空间中张成了整个三维空间，可以想象一下，两个向量已经张成了一个平面，而平面沿着第三个向量进行平移，张成了整个三维空间。新增的向量如果落在了原有向量张成的空间中，那么这个向量与原先的向量是线性相关的；另一方面如果所有向量都给张成的空间增添了新的维度，它们就是线性无关的。
+
+向量在右 矩阵在左的时候
+
+线性变换就是把矩阵里的值看成列向量
+
+空间投影就是把矩阵看成行向量（每个行向量和右边向量点积，点积即投影）
+
+首先，线性变换是把一个向量变为另一个向量，这里不涉及坐标变换。形式上，你可以把向量写成一行，然后右边乘一个矩阵，结果仍然写成了一行，成为新的向量。至于向量左乘矩阵，当这个向量的每个分量都表示一个基的时候，这就是基变换；而当这个向量的每个分量只是向量分量时，这就是线性变换。
+
+线性组合 线性变换 线性相关 线性可分 空间投影
+
+OpenGL中经常会使用的平移矩阵、缩放矩阵以及旋转矩阵，投影矩阵。
+
+解析解，是指通过严格的公式所求得的解。即包含分式、三角函数、指数、对数甚至无限级数等基本函数的解的形式。给出解的具体函数形式，从解的表达式中就可以算出任何对应值。用来求得解析解的方法称为解析法，解析法是常见的微积分技巧，如分离变量法等。解析解为一封闭形式的函数，因此对任一独立变量，皆可将其代入解析函数求得正确的相依变量。因此，解析解也称为闭式解。
+
+特别的，凸集，实数R上（或复数C上）的向量空间中，如果集合S中任两点的连线上的点都在S内，则称集合S为凸集。
+
+凸函数是一个定义在某个向量空间的凸子集C（区间）上的实值函数f，而且对于凸子集C中任意两个向量  , f((x1+x2)/2)>=(f(x1)+f(x2))/2,则f(x)是定义在凸子集c中的凸函数（该定义与凸规划中凸函数的定义是一致的，下凸）。
+
+牛顿法是一种在实数域和复数域上近似求解方程的方法。方法使用函数f(x)的泰勒级数的前面几项来寻找方程f(x) = 0的根。牛顿法最大的特点就在于它的收敛速度很快。
+
+梯度下降法实现简单，当目标函数是凸函数时，梯度下降法的解是全局解。一般情况下，其解不保证是全局最优解，梯度下降法的速度也未必是最快的。梯度下降法的优化思想是用当前位置负梯度方向作为搜索方向，因为该方向为当前位置的最快下降方向，所以也被称为是”最速下降法“。
+
+梯度的本意是一个向量（矢量），表示某一函数在该点处的沿着该方向取得最大值，即函数在该点处沿着该方向（此梯度的方向）变化最快，变化率最大（为该梯度的模）。
+
+在函数定义域的内点，对某一方向求导得到的导数。一般为二元函数和三元函数的方向导数，方向导数可分为沿直线方向和沿曲线方向的方向导数。
+
+启发式优化方法种类繁多，包括经典的模拟退火方法、遗传算法、蚁群算法以及粒子群算法等等。
+
+共轭梯度法是介于最速下降法与牛顿法之间的一个方法，它仅需利用一阶导数信息，但克服了最速下降法收敛慢的缺点，又避免了牛顿法需要存储和计算Hesse矩阵并求逆的缺点，共轭梯度法不仅是解决大型线性方程组最有用的方法之一，也是解大型非线性最优化最有效的算法之一。
+
+共轭在数学、物理、化学、地理等学科中都有出现。 本意：两头牛背上的架子称为轭，轭使两头牛同步行走。共轭即为按一定的规律相配的一对。通俗点说就是孪生。
+
+作为一种优化算法，拉格朗日乘子法主要用于解决约束优化问题，它的基本思想就是通过引入拉格朗日乘子来将含有n个变量和k个约束条件的约束优化问题转化为含有（n+k）个变量的无约束优化问题。拉格朗日乘子背后的数学意义是其为约束方程梯度线性组合中每个向量的系数。
+
+最优化问题的共同特点是：求满足一定条件的变量x1，x2，…，xn，使某函数f(x1，x2，…，xn)取得最大值或者最小值。
+
+矩阵A为n阶方阵，若存在n阶矩阵B，使得矩阵A、B的乘积为单位阵，则称A为可逆阵，B为A的逆矩阵。若方阵的逆阵存在，则称为可逆矩阵或非奇异矩阵，且其逆矩阵唯一。
+在矩阵的乘法中，有一种矩阵起着特殊的作用，如同数的乘法中的1，这种矩阵被称为单位矩阵。它是个方阵，从左上角到右下角的对角线（称为主对角线）上的元素均为1。除此以外全都为0。
+
+矩阵求导（Matrix Derivative）也称作矩阵微分（Matrix Differential），在机器学习、图像处理、最优化等领域的公式推导中经常用到。
+
+矩阵的微积分本质上是多元变量的微积分问题，只是应用在矩阵空间上而已
+
+机器学习中的线性代数之矩阵求导
+https://blog.csdn.net/u010976453/article/details/54381248
+
+参数估计是机器学习里面的一个重要主题，而极大似然估计是最传统、使用最广泛的估计方法之一。
+
+十分钟学习极大似然估计
+https://endlesslethe.com/easy-to-learn-mle.html
+
+极大似然估计其实是理想地认为，对于极少的样本观测，我们观测到的样本很可能就是发生概率最大的。
+
+Latex数学公式简明教程
+https://endlesslethe.com/latex-math-formula-tutorial.html
+
+最小二乘法是勒让德( A. M. Legendre)于1805年在其著作《计算慧星轨道的新方法》中提出的。它的主要思想就是求解未知参数，使得理论值与观测值之差（即误差，或者说残差）的平方和达到最小：
+
+把  矩阵的行列互换之后得到的矩阵，称为  的转置矩阵，记作 A^T
+一个n阶方阵A称为可逆的，或非奇异的，如果存在一个n阶方阵B，使得AB=BA=E则称B是A的一个逆矩阵。A的逆矩阵记作A-1。
+
+
+3D矩阵变换中，投影矩阵是最复杂的。位移和缩放变换一目了然，旋转变换只要基本的三角函数就能想象出来，投影矩阵则很难凭借直觉想象出来。
+
+当样本量m很少，小于特征数n的时候，这时拟合方程是欠定的，需要使用LASSO。当m=n时，用方程组求解。当m>n时，拟合方程是超定的，我们可以使用最小二乘法。
+
+投影矩阵推导(翻译)
+https://www.cnblogs.com/davelink/p/5623760.html
+
+损失函数（loss function）或代价函数（cost function）是将随机事件或其有关随机变量的取值映射为非负实数以表示该随机事件的“风险”或“损失”的函数。在应用中，损失函数通常作为学习准则与优化问题相联系，即通过最小化损失函数求解和评估模型。
+
+机器学习：Python中如何使用最小二乘法
+https://www.cnblogs.com/lc1217/p/6514734.html
+
+机器学习:形如抛物线的散点图在python和R中的非线性回归拟合方法
+http://www.cnblogs.com/lc1217/p/6519860.html
+
+
+机器学习：Python实现单层Rosenblatt感知器
+https://www.cnblogs.com/lc1217/p/6530177.html
+
+Rosenblatt感知器详解
+https://www.cnblogs.com/lanix/p/5003521.html
+
+Python 机器学习
+https://www.cnblogs.com/lc1217/category/960537.html
+
+深度学习：Keras入门(一)之基础篇
+https://www.cnblogs.com/lc1217/p/7132364.html
+
+常见硬盘IOPS参考值
+https://elf8848.iteye.com/blog/1731301
+
+对机械硬盘和SSD固态硬盘IOPS、吞吐量的压测对比
+http://blog.itpub.net/28916011/viewspace-2200027/
+
+硬盘IOPS与读写速度
+https://blog.csdn.net/star890124/article/details/52004138
+
+磁盘性能指标--IOPS、吞吐量及测试
+https://blog.51cto.com/wushank/1708168
+
+centos7 df 命令卡死
+https://www.cnblogs.com/John-2011/p/9577038.html
+
+systemctl restart proc-sys-fs-binfmt_misc.automount;
+
+调用谷歌翻译API
+https://www.jianshu.com/p/6187d5915f70
+
+解决pip的警告
+pip install pyopenssl ndg-httpsclient pyasn1
+
+
+
+禁用 root ssh，增加新用户
+
+useradd wawa
+passwd wawa
+usermod -G wheel wawa
+
+vi /etc/ssh/sshd_config
+    port 36000
+    PermitRootLogin no
+    
+    
+用sklearn做一个完整的机器学习工程——以波士顿房价预测为例。（一、用自定义转换器、Pipeline Feature_Union做特征工程）
+https://blog.csdn.net/PythonstartL/article/details/82874932
+https://blog.csdn.net/PythonstartL/article/details/82991548
+https://blog.csdn.net/PythonstartL/article/details/83347173
+
+https://blog.csdn.net/sdoddyjm68/article/details/78991699
+
+香港大学深度学习课件笔记（1.5）
+https://blog.csdn.net/sdoddyjm68/article/details/78409202
+
+总结：sklearn机器学习之特征工程
+https://www.jianshu.com/p/1c4ec02dd33f
+
+Sklearn 笔记
+https://www.cnblogs.com/yaoz/tag/Sklearn/
+
+机器学习中的范数规则化之（一）L0、L1与L2范数
+https://blog.csdn.net/zouxy09/article/details/24971995
+笔记︱范数正则化L0、L1、L2-岭回归&Lasso回归（稀疏与特征工程）
+https://blog.csdn.net/sinat_26917383/article/details/52092040
+
+机器学习中的损失函数 （着重比较：hinge loss vs softmax loss）
+https://blog.csdn.net/u010976453/article/details/78488279
+
+zouxy09博客原创性博文导航：怀着对机器学习和计算机视觉
+https://blog.csdn.net/zouxy09/article/details/14222605
+
+Python机器学习库scikit-learn实践
+https://blog.csdn.net/zouxy09/article/details/48903179    
+
+
+iris-经典案例解析-机器学习
+https://www.jianshu.com/p/da18f0cd7f60
+
+机器学习训练数据
+http://archive.ics.uci.edu/ml/index.php
+
+tensorflow提示未编译使用SSE4.1，SSE4.2等问题的解决方法
+https://blog.csdn.net/qq_36511757/article/details/77895316
+
+
+Ubuntu 18.04 安装 nodejs
+Ubuntu 18.04 LTS Server npm : Depends: node-gyp (>= 0.10.9) but it is not going to be installed [duplicate]
+https://askubuntu.com/questions/1057737/ubuntu-18-04-lts-server-npm-depends-node-gyp-0-10-9-but-it-is-not-going
+
+ubuntu无法修正错误，因为您要求某些软件包保持现状...解决办法
+https://blog.csdn.net/buppt/article/details/78914234
+
+sudo apt install npm
+
+    npm : 依赖: node-gyp (>= 0.10.9) 但是它将不会被安装
+    
+sudo apt install node-gyp
+
+    node-gyp : 依赖: nodejs-dev 但是它将不会被安装    
+    
+sudo apt install nodejs-dev
+
+    nodejs-dev : 依赖: libssl1.0-dev (>= 1.0.2) 但是它将不会被安装    
+    
+sudo apt install libssl1.0-dev    
+sudo apt -f install npm
+
+
+How to install Node.js and npm on Ubuntu 18.04
+https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/
+
+
+## 小型团队工程化 CheckList
+
+git 不显示中文
+git config --global core.quotepath false
+
+tar 压缩中文文件乱码
+sudo apt install p7zip-full
+7za a x.7z *.ipynb *.py
+
+
+Issue in installing php7.2-mcrypt
+https://stackoverflow.com/questions/48275494/issue-in-installing-php7-2-mcrypt
+https://lukasmestan.com/install-mcrypt-extension-in-php7-2/
+
+
+apt install php-pear
+pecl version
+
+apt-get -y install gcc make autoconf libc-dev pkg-config
+apt-get -y install php7.2-dev libmcrypt-dev
+pecl install mcrypt-1.0.1
+
+bash -c "echo extension=/usr/lib/php/20170718/mcrypt.so > /etc/php/7.2/cli/conf.d/mcrypt.ini"
+php -i | grep "mcrypt"
+
+Encrypt/decrypt with XOR in PHP
+https://stackoverflow.com/questions/14673551/encrypt-decrypt-with-xor-in-php
+
+
+2018-04-27 《程序员的职业素养 - The Clean Coder》
+https://blog.csdn.net/sunzhongyuan888/article/details/80396825
+
+ 好程序员与坏程序员的差别详细分析！
+http://www.sohu.com/a/223781695_413876
+ 
+ 什么样的人当不好程序员？
+ https://36kr.com/p/5042433.html
+ 
+ 一个十几年程序员给所有新老程序员的忠告
+ https://www.jianshu.com/p/57fd54974d71
+ 
+ 好的程序员和差的程序员
+ https://blog.csdn.net/dutao53486944/article/details/20009039
+ 
+ 金牌员工下班前必做的6件事
+ https://jingyan.baidu.com/article/bad08e1ea2e3a709c9512168.html
+ 
+ 
+ # 格式化大硬盘，大于 4 G
+
+    # 查看硬盘数
+    fdisk -l
+    
+    # 用 parted 进行大分区
+    parted /dev/vdb
+        mklable gpt
+        print
+        mkpart primary 0 4295GB
+        gpt
+        
+    # 查看分区结果
+    fdisk -l
+    
+    # 格式化
+    mkfs.ext4 -T largefile /dev/vdb1
+    
+    # 挂载
+    mount -t ext4 /dev/vdb1 /data2
+    
+    # 设置重启后也生效
+    echo '/dev/vdb1   /data2  ext4    defaults    0   0'  >>/etc/fstab
+    
+ganglia 不显示堆叠图
+Missing stacked graphs on new ganglia-web 3.5.3 install
+https://sourceforge.net/p/ganglia/mailman/ganglia-general/thread/alpine.DEB.2.02.1209191232500.4417@vukovar/
+rm /var/lib/ganglia-web/conf/ganglia_metrics.cache    
+
+Python Encrypting with PyCrypto AES
+https://stackoverflow.com/questions/14179784/python-encrypting-with-pycrypto-aes
+
+推荐 ：一文读懂最大似然估计(附R代码)
+http://www.ijiandao.com/2b/baijia/171559.html
+
+数据科学家应知必会的6种常见概率分布
+https://blog.csdn.net/kicilove/article/details/78655856
+
+通过阿里云API(php)搭建秒级DDNS动态域名解析
+https://www.zimrilink.com/share/aliddns.html
+
+
+
+
+代码的好味道和坏味道之22种坏味道
+https://blog.csdn.net/zxh19800626/article/details/84781597
+
+谈谈我们公司如何做Code Review
+https://blog.csdn.net/zxh19800626/article/details/84995166#comments
+
+
+office 文件预览
+https://products.office.com/zh-cn/office-online/documents-spreadsheets-presentations-office-online?rtc=1
+https://products.office.com/en-us/office-online/documents-spreadsheets-presentations-office-online?rtc=1
+libreoffice
+
+
+ssh2,node-rdp,xterm,monaco-editor,socket.io
+
+请问感冒的分类有哪几种?
+http://www.bu-shen.com/shen-usnyhbbn.htm
+
+Web code editor with Monaco code editor, JQuery file tree browser , nodejs
+https://github.com/moorthi07/marscode
+
+Add close button to jquery ui tabs?
+https://stackoverflow.com/questions/14357614/add-close-button-to-jquery-ui-tabs
+http://jqueryui.com/tabs/#manipulation
+
+How can I get file extensions with JavaScript?
+https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript
+
+Linux中profile、bashrc、bash_profile之间的区别和联系
+https://blog.csdn.net/m0_37739193/article/details/72638074
+
+linux中CentOS、Ubuntu、Debian三个版本系统 差别
+https://www.cnblogs.com/baichuanhuihai/p/8056976.html
+
+代码规范 : 表驱动法(if switch 真讨厌)
+https://blog.csdn.net/qq_22555107/article/details/78884261
+
+umeditor储存型xss漏洞 
+https://www.yuag.org/2017/09/19/ueditor%E5%82%A8%E5%AD%98%E5%9E%8Bxss%E6%BC%8F%E6%B4%9E/  
+
+根据白名单过滤 HTML(防止 XSS 攻击)
+https://github.com/leizongmin/js-xss/blob/master/README.zh.md
+
+
+jQuery的.bind() .live() .delegate()和.on()之间的区别
+https://blog.csdn.net/weixin_38840741/article/details/80272203
+
+Connecting to remote SSH server (via Node.js/html5 console)
+https://stackoverflow.com/questions/38689707/connecting-to-remote-ssh-server-via-node-js-html5-console
