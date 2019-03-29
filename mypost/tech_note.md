@@ -2729,3 +2729,211 @@ https://blog.csdn.net/weixin_38840741/article/details/80272203
 
 Connecting to remote SSH server (via Node.js/html5 console)
 https://stackoverflow.com/questions/38689707/connecting-to-remote-ssh-server-via-node-js-html5-console
+
+C 语言经典100例
+http://www.runoob.com/cprogramming/c-100-examples.html
+C 语言实例
+http://www.runoob.com/cprogramming/c-examples.html
+
+jqueryfiletree/jqueryfiletree
+https://github.com/jqueryfiletree/jqueryfiletree
+
+clean-code-javascript
+https://github.com/ryanmcdermott/clean-code-javascript
+clean-code-php
+https://github.com/jupeter/clean-code-php
+
+
+PHP 代码简洁之道 （ PHP Clean Code）
+https://zhuanlan.zhihu.com/p/33451652
+
+软件开发名言：kiss, dry, 单一指责，不要过早优化，破窗理论
+
+[pyp-w3] Simple Database System
+https://github.com/rmotr-group-projects/pyp-w3-gw-simple-database-system
+3. Practical: A Simple Database
+http://www.gigamonkeys.com/book/practical-a-simple-database.html
+Practical Common Lisp
+http://www.gigamonkeys.com/book/
+Practical Common Lisp【个人翻译版】
+https://www.douban.com/note/178148141/
+
+
+需要将php.ini中的配置指令做如下修改： 
+
+1. error_reporting = E_ALL ;将会向PHP报告发生的每个错误 
+
+2. display_errors = Off ;不显示满足上条 指令所定义规则的所有错误报告 
+
+3. log_errors = On ;决定日志语句记录的位置 
+
+4. log_errors_max_len = 1024 ;设置每个日志项的最大长度 
+
+5. error_log = /usr/local/error.log ;指定产生的 错误报告写入的日志文件位置 
+
+在CentOS上安装Python3的三种方法
+https://www.centos.bz/2018/01/%E5%9C%A8centos%E4%B8%8A%E5%AE%89%E8%A3%85python3%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/
+How do I check whether a file exists without exceptions?
+https://stackoverflow.com/questions/82831/how-do-i-check-whether-a-file-exists-without-exceptions
+
+logging.basicConfig(format='%(asctime)-15s %(message)s', level=logging.NOTSET, stream=sys.stdout)
+
+Logging, StreamHandler and standard streams
+https://stackoverflow.com/questions/1383254/logging-streamhandler-and-standard-streams
+
+Insert an item into sorted list in Python
+https://stackoverflow.com/questions/8024571/insert-an-item-into-sorted-list-in-python
+
+二分查找
+Inserting and removing into/from sorted list in Python
+https://stackoverflow.com/questions/17348332/inserting-and-removing-into-from-sorted-list-in-python
+
+Python 顾问
+https://stackoverflow.com/users/100297/martijn-pieters
+
+跳跃表
+EFFICIENT RUNNING MEDIAN USING AN INDEXABLE SKIPLIST (PYTHON RECIPE)
+http://code.activestate.com/recipes/576930-efficient-running-median-using-an-indexable-skipli/
+
+Python 树
+http://interactivepython.org/runestone/static/pythonds/Trees/SearchTreeImplementation.html
+https://pythonspot.com/python-tree/
+
+Problem Solving with Algorithms and Data Structures using Python
+http://interactivepython.org/runestone/static/pythonds/index.html
+使用算法和数据结构解决问题
+https://facert.gitbooks.io/python-data-structure-cn/content/
+Learn to program, one byte at a time.
+http://pythonschool.net/
+
+
+在Ubuntu上使用golang
+https://blog.csdn.net/miracle33/article/details/82875229
+
+Replace a string in shell script using a variable
+https://stackoverflow.com/questions/3306007/replace-a-string-in-shell-script-using-a-variable
+
+
+500 Lines or Less
+https://github.com/aosabook/500lines
+http://aosabook.org/blog/
+http://www.wangfz.com/archives/1254
+
+
+WLP4 Programming Language Specification
+https://www.student.cs.uwaterloo.ca/~cs241/wlp4/WLP4.html
+
+
+Ubuntu防火墙 UFW 设置
+http://www.cnblogs.com/sxwailyc/archive/2010/07/10/1774909.html
+
+How can I open a range of ports in ubuntu using (g)ufw
+https://askubuntu.com/questions/7099/how-can-i-open-a-range-of-ports-in-ubuntu-using-gufw
+
+ufw allow 11200:11299/tcp
+ufw allow 11200:11299/udp
+
+ufw allow from AAA.BBB.CCC.DDD/EE to any port 11200:11299 proto tcp
+ufw allow from AAA.BBB.CCC.DDD/EE to any port 11200:11299 proto udp
+
+
+
+1700页数学笔记火了！全程敲代码，速度飞快易搜索，硬核小哥教你上手LaTeX+Vim
+https://zhuanlan.zhihu.com/p/60049290
+从基本原理到梯度下降，小白都能看懂的神经网络教程
+https://zhuanlan.zhihu.com/p/59385110
+
+主成分分析PCA
+http://www.cnblogs.com/zhangchaoyang/articles/2222048.html
+sklearn中PCA的使用方法
+https://www.jianshu.com/p/8642d5ea5389
+在线PS图片编辑器
+http://ps.xunjiepdf.com/
+
+
+当数据分布比较分散（即数据在平均数附近波动较大）时，各个数据与平均数的差的平方和较大，方差就较大；当数据分布比较集中时，各个数据与平均数的差的平方和较小。因此方差越大，数据的波动越大；方差越小，数据的波动就越小。
+
+
+Ubuntu安装Java8和Java9
+https://www.cnblogs.com/woshimrf/p/ubuntu-install-java.html
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo apt install oracle-java8-set-default
+
+What is the Tomcat installation directory?
+https://askubuntu.com/questions/135824/what-is-the-tomcat-installation-directory
+Tomcat7 on Ubuntu14.04 html works but 404 error for servlets
+https://stackoverflow.com/questions/32411364/tomcat7-on-ubuntu14-04-html-works-but-404-error-for-servlets
+
+[Machine Learning & Algorithm] 随机森林（Random Forest）
+http://www.cnblogs.com/maybe2030/p/4585705.html
+[Machine Learning] 机器学习常见算法分类汇总
+http://www.cnblogs.com/maybe2030/p/4665816.html#web
+使用sklearn的cross_val_score进行交叉验证
+https://blog.csdn.net/qq_36523839/article/details/80707678
+
+直线回归方程：当两个变量x与y之间达到显著地线性相关关系时,应用最小二乘法原理确定一条最优直线的直线方程y=a+bx,这条回归直线与个相关点的距离比任何其他直线与相关点的距离都小,是最佳的理想直线.
+回归截距a：表示直线在y轴上的截距,代表直线的起点.
+回归系数b：表示直线的斜率,他的实际意义是说明x每变化一个单位时,影响y平均变动的数量.
+即x每增加1单位,y变化b个单位.
+
+https://blog.csdn.net/zxd1754771465/article/details/72896169
+由方差、偏差、噪声、泛化误差的公式可以看出，偏差度量了模型预测的期望值与真实值之间的偏离程度，刻画了模型本身的拟合能力；方差度量了训练集的变动对预测结果的影响；噪声表达了能达到的期望误差的下界，刻画了学习问题本身的难度。
+
+误差（包括训练误差，测试误差）=偏差+方差+噪声
+
+经验误差与泛化误差、偏差与方差、欠拟合与过拟合、交叉验证
+https://blog.csdn.net/zhihua_oba/article/details/78684257
+
+偏差（Bias）与方差（Variance）
+https://zhuanlan.zhihu.com/p/38853908
+
+偏差，方差，训练误差，测试误差的区别
+https://blog.csdn.net/xiaopihaierletian/article/details/68921609
+
+
+## 机器学习
+
+- 数据降维:
+    - PCA
+- 可视化：
+    - 散点图：plt.scatter
+- 描述性分析（describe）：mean，std，value_counts
+- 数据标准化（normalize）：min-max，Z-score
+- 划分训练集和测试集：train_test_split
+- 调参：
+    - 网格搜索：GridSearchCV
+- 模型性能评估：
+    - 指标：错误率，假阳性，假阴性，均方误差，残差图
+    - 方法：
+        - 交叉验证
+- 算法：
+    - K 近邻：KNN
+    - 支持向量机：SVM
+        - 线性支持向量机：LinearSVC
+    - 随机森林：RF
+    - 朴素贝叶斯（NB）
+    - 线性回归：最小二乘，截距，回归系数
+- 特征提取
+    - 文本
+        - 去除停止词
+        - 词袋模型，CountVectorizer
+        - 逆文档频率，TF-IDF，TfidfTransformer
+- pipeline：vect->tfidf->svm
+
+查看本机对外网网卡监听的所有端口
+netstat -tnpl | awk '{print $4}' | grep -E '(0.0.0.0)|(:::)' |sed -r 's/(:::)|([0-9]+.[0-9]+.[0-9]+.[0-9]+:)//' | sort | uniq | sort -n
+
+
+
+如果你是高端人才，你更需要的是“领悟力”，而不是“学习能力”
+https://www.jianshu.com/p/fbfac3358f97
+
+递归下降语法分析器实现过程
+https://www.jianshu.com/p/988ce6fd0e67
+
+
+How can jQuery deferred be used?
+https://stackoverflow.com/questions/4869609/how-can-jquery-deferred-be-used
