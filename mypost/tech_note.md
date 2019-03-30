@@ -2937,3 +2937,33 @@ https://www.jianshu.com/p/988ce6fd0e67
 
 How can jQuery deferred be used?
 https://stackoverflow.com/questions/4869609/how-can-jquery-deferred-be-used
+
+使用指定的列绘制散点图
+Plot 2-dimensional NumPy array using specific columns
+https://stackoverflow.com/questions/13634349/plot-2-dimensional-numpy-array-using-specific-columns
+
+Matplotlib绘制高斯核概率分布(Gaussian kernel density estimator)等实战
+https://blog.csdn.net/Wayne_Mai/article/details/80465478
+
+python随机数组，高斯噪声，多项式函数
+https://blog.csdn.net/ikerpeng/article/details/20703851
+
+机器学习之朴素贝叶斯及高斯判别分析
+https://www.cnblogs.com/zyber/p/6490663.html
+
+常见的判别模型有线性回归、对数回归、线性判别分析、支持向量机、boosting、条件随机场、神经网络等。
+
+常见的生产模型有隐马尔科夫模型、朴素贝叶斯模型、高斯混合模型、LDA、Restricted Boltzmann Machine等。
+
+
+高斯分布可视化
+Visualizing the bivariate Gaussian distribution
+https://scipython.com/blog/visualizing-the-bivariate-gaussian-distribution/
+
+小试牛刀-递归下降算法（3）
+https://blog.csdn.net/lgh1700/article/details/78437563
+https://blog.csdn.net/lgh1700/article/details/78450098
+https://blog.csdn.net/lgh1700/article/details/78450116
+
+重磅来袭 - Lua语法分析（1）
+https://blog.csdn.net/lgh1700/article/details/78450159
